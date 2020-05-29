@@ -3,6 +3,7 @@ import { Link as AnimationLink } from 'react-scroll'
 import { element } from 'base/base'
 import LinkList from 'base/LinkList'
 import Link from 'base/Link'
+import Icon from 'base/Icon'
 import Logo from 'base/Logo'
 import Button from 'base/Button'
 import Badge from 'base/Badge'
@@ -21,7 +22,11 @@ const afterContent = () => (
     <AnimationLink to="plugins" spy={true} smooth={true} duration={300}>
       <Link href="#" label="Plugins" />
     </AnimationLink>
-    <Button google label="Sign in with Google" beforeContent={'logo'} />
+    <Button
+      google
+      label="Sign in with Google"
+      beforeContent={<Icon name="google" />}
+    />
   </LinkList>
 )
 

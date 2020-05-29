@@ -15,6 +15,7 @@ export default text
     level2: {
       fontSize: 24,
       fontWeight: t.fontWeight.semibold,
+      marginBottom: 54,
     },
     level3: {
       marginY: 12,

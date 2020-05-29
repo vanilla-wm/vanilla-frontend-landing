@@ -2,6 +2,7 @@ import React from 'react'
 import { Container, Row, Col } from '@vitus-labs/coolgrid'
 import Heading from 'base/Heading'
 import Button from 'base/Button'
+import Icon from 'base/Icon'
 import Wrapper from './Wrapper'
 import InnerBox from './InnerBox'
 
@@ -18,7 +19,11 @@ export default () => (
               Plug ‘n’ play firewall that verifies Web Monetization payments for
               every byte of your content.
             </Heading>
-            <Button google label="Sign in with Google" />
+            <Button
+              google
+              label="Sign in with Google"
+              beforeContent={<Icon name="google" />}
+            />
           </InnerBox>
         </Col>
       </Row>
