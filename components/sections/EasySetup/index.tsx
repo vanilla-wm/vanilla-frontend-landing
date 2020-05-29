@@ -12,26 +12,26 @@ export default () => (
       <Row size={{ xs: 12, sm: 6, md: 3 }}>
         <Col>
           <Box>
-            <Heading level2 label="Test" />
-            <Text>Some text here</Text>
+            <Heading level2 label="1. Vanilla Account" />
+            <Text>Create Vanilla account by singing up with Google</Text>
           </Box>
         </Col>
         <Col>
           <Box>
-            <Heading level2 label="Test" />
-            <Text>Some text here</Text>
+            <Heading level2 label="2. Payment Pointer" />
+            <Text>Add Payment Pointer to Wallet of your choice</Text>
           </Box>
         </Col>
         <Col>
           <Box>
-            <Heading level2 label="Test" />
-            <Text>Some text here</Text>
+            <Heading level2 label="3. Code Snippet" />
+            <Text>Place generate Code Snippet to head of your HTML</Text>
           </Box>
         </Col>
         <Col>
           <Box>
-            <Heading level2 label="Test" />
-            <Text>Some text here</Text>
+            <Heading level2 label="4. API" />
+            <Text>Call our API whenever you want to verify payments</Text>
           </Box>
         </Col>
       </Row>

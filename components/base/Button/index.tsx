@@ -11,5 +11,6 @@ export default element
       backgroundColor: 'rgba(254, 182, 17, 0.2)',
       borderRadius: 7,
       height: 48,
+      fontWeight: 'bold',
     },
   })
