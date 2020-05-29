@@ -6,31 +6,31 @@ import Text from 'base/Text'
 import Box from './Box'
 
 export default () => (
-  <Section id="easy-setup">
-    <Heading level2>Easy setup</Heading>
+  <Section id="plugins">
+    <Heading level2>Plugins</Heading>
     <Container>
       <Row size={{ xs: 12, sm: 6, md: 3 }}>
         <Col>
           <Box>
-            <Heading level2 label="Test" />
+            <Heading level2 label="Wordpress" />
             <Text>Some text here</Text>
           </Box>
         </Col>
         <Col>
           <Box>
-            <Heading level2 label="Test" />
+            <Heading level2 label="Express.js" />
             <Text>Some text here</Text>
           </Box>
         </Col>
         <Col>
           <Box>
-            <Heading level2 label="Test" />
+            <Heading level2 label="Code Snippet" />
             <Text>Some text here</Text>
           </Box>
         </Col>
         <Col>
           <Box>
-            <Heading level2 label="Test" />
+            <Heading level2 label="API" />
             <Text>Some text here</Text>
           </Box>
         </Col>
