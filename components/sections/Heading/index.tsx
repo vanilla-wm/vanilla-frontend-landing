@@ -12,7 +12,7 @@ export default () => (
       <Row>
         <Col>
           <InnerBox>
-            <Heading level1>
+            <Heading title>
               Protect your Web Monetized content with Vanilla
             </Heading>
             <Heading tag="h2" subheading>

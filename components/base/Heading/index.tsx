@@ -8,6 +8,11 @@ export default text
     marginY: t.spacing.reset,
   }))
   .variants((t) => ({
+    title: {
+      fontSize: 36,
+      fontWeight: t.fontWeight.bold,
+      marginBottom: 24,
+    },
     level1: {
       fontSize: 36,
       fontWeight: t.fontWeight.bold,
