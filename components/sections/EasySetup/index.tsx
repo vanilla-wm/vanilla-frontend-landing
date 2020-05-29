@@ -7,7 +7,7 @@ import Box from './Box'
 
 export default () => (
   <Section id="easy-setup">
-    <Heading level2>Easy setup</Heading>
+    <Heading level1>Easy setup</Heading>
     <Container>
       <Row size={{ xs: 12, sm: 6, md: 3 }}>
         <Col>

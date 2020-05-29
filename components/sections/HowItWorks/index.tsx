@@ -7,7 +7,7 @@ import Box from './Box'
 
 export default () => (
   <Section id="how-it-works">
-    <Heading level2>How it works</Heading>
+    <Heading level1>How it works</Heading>
     <Container>
       <Row>
         <Col>

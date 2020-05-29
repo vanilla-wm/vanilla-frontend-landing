@@ -11,11 +11,11 @@ export default text
     level1: {
       fontSize: 36,
       fontWeight: t.fontWeight.bold,
+      marginBottom: 54,
     },
     level2: {
       fontSize: 24,
       fontWeight: t.fontWeight.semibold,
-      marginBottom: 54,
     },
     level3: {
       marginY: 12,
