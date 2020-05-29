@@ -1,0 +1,11 @@
+import { element } from 'base/base'
+
+export default element
+  .config({ name: 'Text' })
+  .attrs({
+    tag: 'a',
+  })
+  .theme({
+    fontSize: 18,
+    color: 'white',
+  })
