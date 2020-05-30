@@ -14,6 +14,7 @@
     "@vitus-labs/elements": "^0.7.10",
     "@vitus-labs/rocketstyle": "^0.7.6",
     "@vitus-labs/unistyle": "^0.7.3",
+    "lodash": "^4.17.15",
     "next": "^9.3.3",
     "next-seo": "^4.5.0",
     "react": "^16.13.1",

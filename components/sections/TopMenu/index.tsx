@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link as AnimationLink } from 'react-scroll'
+import { throttle } from 'lodash'
 import { element } from 'base/base'
 import LinkList from 'base/LinkList'
 import Link from 'base/Link'
@@ -37,8 +38,18 @@ const beforeContent = () => (
   </>
 )
 
-export default element
-  .config({ name: 'section/TopMenu' })
+const Wrapper = element
+  .config({ name: 'section/TopMenu/Wrapper' })
+  .attrs({
+    id: 'home',
+    block: true,
+  })
+  .theme({
+    height: 72,
+  })
+
+const Inner = element
+  .config({ name: 'section/TopMenu/Inner' })
   .attrs({
     id: 'home',
     block: true,
@@ -49,7 +60,44 @@ export default element
         margin-left: 12px
     }`,
   })
-  .theme({
-    height: 72,
+  .theme((t) => ({
+    boxSizing: 'content-box',
+    position: 'fixed',
+    top: 0,
+    left: 0,
+    right: 0,
+    height: 'inherit',
+    width: 'inherit',
+    backgroundColor: t.color.black,
     paddingX: 16,
+    zIndex: 100,
+  }))
+  .variants({
+    sticked: {
+      borderBottom: `1px solid #48484A`,
+    },
   })
+
+export default (props) => {
+  const [sticked, setSticked] = useState(false)
+
+  const handleScroll = (e) => {
+    window.scrollY === 0 ? setSticked(false) : setSticked(true)
+  }
+
+  useEffect(() => {
+    if (typeof window !== undefined) {
+      window.addEventListener('scroll', throttle(handleScroll, 100))
+
+      return () => {
+        window.removeEventListener('scroll', handleScroll)
+      }
+    }
+  })
+
+  return (
+    <Wrapper>
+      <Inner {...props} sticked={sticked} />
+    </Wrapper>
+  )
+}
