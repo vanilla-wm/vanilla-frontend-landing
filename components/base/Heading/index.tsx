@@ -22,7 +22,7 @@ export default element
       color: t.color.primary,
     },
     level1: {
-      fontSize: { xs: 24, md: 32 },
+      fontSize: { xs: 24, lg: 32 },
       fontWeight: t.fontWeight.bold,
       marginBottom: { xs: 24, md: 48 },
       backgroundColor: t.color.primary,
@@ -51,8 +51,16 @@ export default element
     },
   }))
   .multiple((t) => ({
+    reset: {
+      paddingX: 0,
+      paddingY: 0,
+      backgroundColor: 'none',
+    },
     left: {
       textAlign: 'left',
+    },
+    centered: {
+      textAlign: 'center',
     },
     dark: {
       color: t.color.black,

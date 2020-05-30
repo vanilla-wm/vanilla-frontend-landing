@@ -19,3 +19,8 @@ export default element
       fontWeight: 'bold',
     },
   }))
+  .multiple({
+    iconBigger: {
+      width: '100%',
+    },
+  })

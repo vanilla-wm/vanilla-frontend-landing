@@ -1,5 +1,7 @@
 import React from 'react'
+import useWindowSize from '@rehooks/window-size'
 import { Container, Row, Col } from '@vitus-labs/coolgrid'
+import { element } from 'base/base'
 import styled from 'styled-components'
 import box from 'base/Box'
 import Heading from 'base/Heading'
@@ -10,23 +12,23 @@ import shape from 'base/Shape'
 
 const dataListA = [
   { label: 'Vanilla Home', link: 'https://vanilla.so' },
-  { label: 'Vanilla Admin', link: 'https://vanilla.so' },
+  { label: 'Vanilla Admin', link: 'https://admin.vanilla.so' },
   { label: 'Terms of Services', link: 'https://vanilla.so' },
   { label: 'Privacy Policy', link: 'https://vanilla.so' },
 ]
 
 const dataListB = [
-  { label: 'Grant for the web', link: 'https://vanilla.so' },
-  { label: 'Coil', link: 'https://vanilla.so' },
-  { label: 'Cinnamon', link: 'https://vanilla.so' },
-  { label: 'Puma Browser', link: 'https://vanilla.so' },
+  { label: 'Grant for the web', link: 'https://www.grantfortheweb.org/' },
+  { label: 'Coil', link: 'https://coil.com/' },
+  { label: 'Cinnamon', link: 'https://www.cinnamon.video/' },
+  { label: 'Puma Browser', link: 'https://www.pumabrowser.com/' },
 ]
 
 const dataListC = [
-  { label: 'Web Monetization', link: 'https://vanilla.so' },
-  { label: 'Interledger', link: 'https://vanilla.so' },
-  { label: 'GateHub', link: 'https://vanilla.so' },
-  { label: 'Uphold', link: 'https://vanilla.so' },
+  { label: 'Web Monetization', link: 'https://webmonetization.org/' },
+  { label: 'Interledger', link: 'https://interledger.org/' },
+  { label: 'GateHub', link: 'https://gatehub.net/' },
+  { label: 'Uphold', link: 'https://uphold.com/en-us/' },
 ]
 
 const Box = box.theme((t) => ({
@@ -48,41 +50,52 @@ const Shape = styled(shape).attrs({
   top: 0;
 `
 
-export default () => (
-  <Box>
-    <Container size={{ xs: 12, md: 3 }} gap={{ xs: 20, md: 80 }} gutter={0}>
-      <Row>
-        <Heading level1 left>
-          Project Vanilla is developed as a part of Grant for the Web hackathon
-          by Cinnamon.
-        </Heading>
-      </Row>
-      <Row>
-        <Col>
-          <Heading dark level2>
-            Sitemap
-          </Heading>
-          <List data={dataListA} />
-        </Col>
-        <Col>
-          <Heading dark level2>
-            Learn more
-          </Heading>
-          <List data={dataListB} />
-        </Col>
-        <Col>
-          <List data={dataListC} />
-        </Col>
-        <Col></Col>
-      </Row>
-      <FooterBox contentDirection="inline">
-        <Text dark sm>
-          Created with love over the weekend in Prague, Czech republic by{' '}
-        </Text>
-        &nbsp;
-        <Logo name="cinnamon" />
-      </FooterBox>
-    </Container>
-    <Shape />
-  </Box>
-)
+export default () => {
+  let windowSize = {}
+  if (process.browser) {
+    windowSize = useWindowSize()
+  }
+
+  const showShape = windowSize.innerWidth >= 768
+
+  return (
+    <Box>
+      {showShape && <Shape />}
+      <Container gutter={0}>
+        <Row>
+          <Col size={{ xs: 12, lg: 9 }}>
+            <Heading reset level1 left>
+              Project Vanilla is developed as a part of Grant for the Web
+              hackathon by Cinnamon.
+            </Heading>
+          </Col>
+        </Row>
+        <Row size={{ xs: 12, sm: 4, lg: 3 }} gap={{ xs: 20, sm: 40, md: 80 }}>
+          <Col>
+            <Heading dark level2>
+              Sitemap
+            </Heading>
+            <List data={dataListA} />
+          </Col>
+          <Col>
+            <Heading dark level2>
+              Learn more
+            </Heading>
+            <List data={dataListB} />
+          </Col>
+          <Col component={element} contentAlignY="bottom">
+            <List data={dataListC} />
+          </Col>
+          <Col></Col>
+        </Row>
+        <FooterBox contentDirection="inline">
+          <Text dark sm>
+            Created with love over the weekend in Prague, Czech republic by{' '}
+          </Text>
+          &nbsp;
+          <Logo name="cinnamon" />
+        </FooterBox>
+      </Container>
+    </Box>
+  )
+}
