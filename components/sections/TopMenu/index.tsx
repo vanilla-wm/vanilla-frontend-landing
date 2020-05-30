@@ -34,7 +34,7 @@ const afterContent = () => (
 
 const beforeContent = () => (
   <>
-    <Logo />
+    <Logo name="vanilla" />
     <Badge>Experimental</Badge>
   </>
 )

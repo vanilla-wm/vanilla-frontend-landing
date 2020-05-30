@@ -1,6 +1,11 @@
 import { element } from 'base/base'
 
-export default element.config({ name: 'Logo' }).attrs({
+const logos = {
+  vanilla: require('assets/Vanilla.svg'),
+  cinnamon: require('assets/cinnamon.svg'),
+}
+
+export default element.config({ name: 'Logo' }).attrs(({ name }) => ({
   tag: 'img',
-  src: require('assets/Vanilla.svg'),
-})
+  src: logos[name],
+}))

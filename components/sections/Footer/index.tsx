@@ -5,6 +5,7 @@ import box from 'base/Box'
 import Heading from 'base/Heading'
 import Text from 'base/Text'
 import List from 'base/List'
+import Logo from 'base/Logo'
 import shape from 'base/Shape'
 
 const dataListA = [
@@ -31,7 +32,7 @@ const dataListC = [
 const Box = box.theme((t) => ({
   backgroundColor: t.color.primary,
   color: t.color.black,
-  paddingY: 100,
+  paddingY: { xs: 64, md: 100 },
   overflow: 'hidden',
 }))
 
@@ -50,10 +51,12 @@ const Shape = styled(shape).attrs({
 export default () => (
   <Box>
     <Container size={{ xs: 12, md: 3 }} gap={{ xs: 20, md: 80 }} gutter={0}>
-      <Heading level1>
-        Project Vanilla is developed as a part of Grant for the Web hackathon by
-        Cinnamon.
-      </Heading>
+      <Row>
+        <Heading level1 left>
+          Project Vanilla is developed as a part of Grant for the Web hackathon
+          by Cinnamon.
+        </Heading>
+      </Row>
       <Row>
         <Col>
           <Heading dark level2>
@@ -72,10 +75,12 @@ export default () => (
         </Col>
         <Col></Col>
       </Row>
-      <FooterBox>
+      <FooterBox contentDirection="inline">
         <Text dark sm>
-          Created with love over the weekend in Prague, Czech republic by
+          Created with love over the weekend in Prague, Czech republic by{' '}
         </Text>
+        &nbsp;
+        <Logo name="cinnamon" />
       </FooterBox>
     </Container>
     <Shape />

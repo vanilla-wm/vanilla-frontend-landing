@@ -7,7 +7,7 @@ export default element
     contentDirection: 'rows',
     contentAlignX: icon ? 'center' : undefined,
   }))
-  .variants({
+  .variants((t) => ({
     icon: {
       height: 140,
       width: 140,
@@ -15,5 +15,7 @@ export default element
       borderRadiusTopLeft: 0,
       backgroundColor: '#202020',
       marginBottom: 16,
+      color: t.color.primary,
+      fontWeight: 'bold',
     },
-  })
+  }))

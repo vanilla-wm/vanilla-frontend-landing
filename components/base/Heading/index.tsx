@@ -4,7 +4,7 @@ export default element
   .config({ name: 'Heading' })
   .attrs({ tag: 'h1', contentAlignX: 'left' })
   .theme((t) => ({
-    textAlign: 'center',
+    // textAlign: 'center',
     marginTop: t.spacing.reset,
     marginBottom: t.spacing.reset,
     fontFamily: t.fontFamily.mono,
@@ -39,10 +39,11 @@ export default element
     },
     level3: {
       marginY: 12,
-      fontSize: { xs: 22, md: t.fontSize.xl },
+      fontSize: { xs: 18, md: t.fontSize.xl },
       fontWeight: t.fontWeight.semibold,
     },
     subheading: {
+      textAlign: 'center',
       fontFamily: t.fontFamily.base,
       fontWeight: 'normal',
       fontSize: { xs: 18, md: 24 },
@@ -50,6 +51,9 @@ export default element
     },
   }))
   .multiple((t) => ({
+    left: {
+      textAlign: 'left',
+    },
     dark: {
       color: t.color.black,
     },
