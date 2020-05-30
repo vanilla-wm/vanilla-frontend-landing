@@ -11,16 +11,16 @@ import Badge from 'base/Badge'
 const afterContent = () => (
   <LinkList>
     <AnimationLink to="home" spy={true} smooth={true} duration={300}>
-      <Link active href="#" label="About" />
+      <Link active label="About" />
     </AnimationLink>
     <AnimationLink to="how-it-works" spy={true} smooth={true} duration={300}>
-      <Link href="#" label="How it works" />
+      <Link label="How it works" />
     </AnimationLink>
     <AnimationLink to="easy-setup" spy={true} smooth={true} duration={300}>
-      <Link href="#" label="Easy Setup" />
+      <Link label="Easy Setup" />
     </AnimationLink>
     <AnimationLink to="plugins" spy={true} smooth={true} duration={300}>
-      <Link href="#" label="Plugins" />
+      <Link label="Plugins" />
     </AnimationLink>
     <Button
       google

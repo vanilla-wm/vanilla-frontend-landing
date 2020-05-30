@@ -5,7 +5,8 @@ export default text
   .attrs({ tag: 'h1', contentAlignX: 'left' })
   .theme((t) => ({
     textAlign: 'center',
-    marginY: t.spacing.reset,
+    marginTop: t.spacing.reset,
+    marginBottom: t.spacing.reset,
     fontFamily: t.fontFamily.mono,
   }))
   .states((t) => ({

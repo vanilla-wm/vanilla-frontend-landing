@@ -20,11 +20,11 @@ export const element = rocketstyle()({
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
 
-      /* ${({ onClick, href }) =>
+      ${({ onClick, href }) =>
         (onClick || href) &&
         css`
           cursor: pointer;
-        `}; */
+        `};
 
       ${({ $rocketstyle, $rocketstate }) => {
         const baseTheme = {

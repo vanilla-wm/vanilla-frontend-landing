@@ -2,13 +2,17 @@ import { element } from 'base/base'
 
 export default element
   .config({ name: 'Link' })
-  // .attrs({
-  //   tag: 'a',
-  // })
+  .attrs(({ href }) => ({
+    tag: href ? 'a' : 'span',
+  }))
   .theme((t) => ({
+    cursor: 'pointer',
     fontWeight: 500,
     base: {
       color: 'white',
+    },
+    hover: {
+      color: t.color.primaryHover,
     },
     active: {
       color: t.color.primary,
@@ -17,7 +21,16 @@ export default element
   }))
   .states((t) => ({
     primary: {
-      color: t.color.primary,
+      base: {
+        color: t.color.primary,
+      },
+      hover: {
+        color: t.color.primaryHover,
+      },
+      active: {
+        color: t.color.primary,
+        borderBottom: `1px solid ${t.color.primary}`,
+      },
     },
   }))
   .multiple({

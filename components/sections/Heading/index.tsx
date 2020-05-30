@@ -33,7 +33,14 @@ export default () => (
               <Text bold>Don't get what we talk about?</Text>
               <br />
               <Text secondary>
-                learn more about <Link primary>Web monetization</Link>
+                learn more about{' '}
+                <Link
+                  primary
+                  href="https://webmonetization.org/"
+                  target="_blank"
+                >
+                  Web monetization
+                </Link>
               </Text>
             </Text>
           </InnerBox>
