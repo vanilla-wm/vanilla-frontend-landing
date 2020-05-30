@@ -1,5 +1,6 @@
 import React from 'react'
 import styled, { keyframes } from 'styled-components'
+import { element } from 'base/base'
 
 const rightSpin = keyframes`
   from {
@@ -27,10 +28,10 @@ const wrapperAnim = keyframes`
 `
 
 const Root = styled.div`
-  width: 100px;
-  height: 100px;
+  width: 30px;
+  height: 30px;
   position: absolute;
-  clip: rect(0px, 100px, 100px, 50px);
+  clip: rect(0px, 30px, 30px, 15px);
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
   animation-timing-function: linear;
@@ -40,12 +41,12 @@ const Root = styled.div`
 `
 
 const Left = styled.div`
-  width: 80px;
-  height: 80px;
-  border: 10px solid #feb611;
-  border-radius: 50px;
+  width: 24px;
+  height: 24px;
+  border: 3px solid #feb611;
+  border-radius: 15px;
   position: absolute;
-  clip: rect(0px, 50px, 100px, 0px);
+  clip: rect(0px, 15px, 30px, 0px);
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
   animation-timing-function: linear;
@@ -54,12 +55,12 @@ const Left = styled.div`
 `
 
 const Right = styled.div`
-  width: 80px;
-  height: 80px;
-  border: 10px solid #feb611;
-  border-radius: 50px;
+  width: 24px;
+  height: 24px;
+  border: 3px solid #feb611;
+  border-radius: 15px;
   position: absolute;
-  clip: rect(0px, 50px, 100px, 0px);
+  clip: rect(0px, 15px, 30px, 0px);
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
   animation-timing-function: linear;
@@ -67,22 +68,45 @@ const Right = styled.div`
   animation-name: ${rightSpin};
 `
 
-const Inner = styled.span`
-  width: 80px;
-  height: 80px;
-  border-radius: 100%;
-  position: absolute;
-  opacity: 0.5;
-  border: 10px solid #5cb16e;
+const Wrapper = styled.div`
+  position: relative;
+  height: 30px;
+  width: 30px;
+  color: #feb611;
 `
 
-export default () => (
-  <Root>
-    <Left>
-      <Inner />
-    </Left>
-    <Right>
-      <Inner />
-    </Right>
-  </Root>
-)
+const Label = styled.span`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  transform: translateX(-50%) translateY(-50%);
+`
+
+const StaticNumber = element
+  .attrs({ contentAlignX: 'center' })
+  .theme((t) => ({
+    height: 30,
+    width: 30,
+    border: `3px solid white`,
+    borderRadius: 160,
+    marginRight: 16,
+    active: {
+      borderColor: t.color.primary,
+      color: t.color.primary,
+    },
+  }))
+  .multiple({ active: true })
+
+export default ({ label, active }) =>
+  active ? (
+    <Wrapper>
+      <Label>{label}</Label>
+      <Root>
+        <Left />
+        <Right />
+      </Root>
+    </Wrapper>
+  ) : (
+    <StaticNumber label={label} />
+  )

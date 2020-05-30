@@ -12,6 +12,8 @@ const Box = box.styles(
   `
 )
 
+const NumberWrapper = box.theme({ height: 30, width: 30, marginRight: 16 })
+
 // const Number = element
 //   .attrs({ contentAlignX: 'center' })
 //   .theme((t) => ({
@@ -32,7 +34,11 @@ export default ({ active, onClick, title, text, index }) => (
     <Heading
       primary={active}
       level2
-      beforeContent={<Number active={active} label={index} />}
+      beforeContent={
+        <NumberWrapper>
+          <Number active={active} label={index} />
+        </NumberWrapper>
+      }
     >
       {title}
     </Heading>
