@@ -7,5 +7,5 @@ export default element
     contentAlignX: 'center',
   })
   .theme({
-    height: 600,
+    height: 700,
   })

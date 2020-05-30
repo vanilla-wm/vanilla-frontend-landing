@@ -7,6 +7,8 @@ import Text from 'base/Text'
 import Link from 'base/Link'
 import Wrapper from './Wrapper'
 import InnerBox from './InnerBox'
+import Parallax from './Parallax'
+import Mouse from './Mouse'
 
 const Button = button.theme({
   marginY: 32,
@@ -14,6 +16,7 @@ const Button = button.theme({
 
 export default () => (
   <Wrapper>
+    <Parallax />
     <Container>
       <Row>
         <Col>
@@ -43,6 +46,8 @@ export default () => (
                 </Link>
               </Text>
             </Text>
+            <Mouse />
+            <Text secondary>Scroll down</Text>
           </InnerBox>
         </Col>
       </Row>

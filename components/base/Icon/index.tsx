@@ -8,7 +8,7 @@ const icons = {
   account: require('assets/account.svg'),
 }
 
-export default element.config({ name: 'Logo' }).attrs(({ name }) => ({
+export default element.config({ name: 'Icon' }).attrs(({ name }) => ({
   tag: 'img',
   src: icons[name],
 }))
