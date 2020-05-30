@@ -4,6 +4,7 @@ import Section from 'base/Section'
 import Heading from 'base/Heading'
 import Text from 'base/Text'
 import Box from './Box'
+import Category from './Category'
 
 const TIMEOUT = 3000
 
@@ -58,22 +59,30 @@ export default () => {
 
   return (
     <Section id="how-it-works">
-      <Heading level1>How it works</Heading>
       <Container>
         <Row>
+          <Heading level1>How it works</Heading>
+        </Row>
+        <Row>
           <Col>
-            <Box onClick={() => boxEvent(0)}>
-              <Heading level2>Content Request</Heading>
-              <Text>User requests content on your web or mobile app</Text>
-            </Box>
-            <Box onClick={() => boxEvent(1)}>
-              <Heading level2>Payment Verification</Heading>
-              <Text>Your back-end verifies payment stream using our API</Text>
-            </Box>
-            <Box onClick={() => boxEvent(2)}>
-              <Heading level2>Content Delivery</Heading>
-              <Text>Content Delivery</Text>
-            </Box>
+            <Category
+              title="Content Request"
+              text="User requests content on your web or mobile app"
+              onClick={() => boxEvent(0)}
+              active={active === 0}
+            />
+            <Category
+              title="Payment Verification"
+              text="Your back-end verifies payment stream using our API"
+              onClick={() => boxEvent(1)}
+              active={active === 1}
+            />
+            <Category
+              title="Content Delivery"
+              text="You are paid and your user is happy 🎉"
+              onClick={() => boxEvent(2)}
+              active={active === 2}
+            />
           </Col>
           <Col>{data[active]}</Col>
         </Row>

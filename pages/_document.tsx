@@ -45,16 +45,15 @@ export default class MyDocument extends Document {
           <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
           <meta name="robots" content="index,follow" />
           <meta name="googlebot" content="index,follow" />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;700&display=swap"
+            rel="stylesheet"
+          />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&family=Work+Sans:wght@400;500;700&display=swap"
+            rel="stylesheet"
+          />
           {this.props.styleTags}
-          <link
-            href="https://fonts.googleapis.com/css?family=Parisienne&display=swap&subset=latin-ext"
-            rel="stylesheet"
-          />
-          <link
-            href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap&subset=latin-ext"
-            rel="stylesheet"
-          />
-
           <meta name="msapplication-TileColor" content="#2d89ef" />
           <meta
             name="msapplication-TileImage"

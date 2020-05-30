@@ -11,10 +11,10 @@ import Badge from 'base/Badge'
 const afterContent = () => (
   <LinkList>
     <AnimationLink to="home" spy={true} smooth={true} duration={300}>
-      <Link href="#" label="About" />
+      <Link active href="#" label="About" />
     </AnimationLink>
     <AnimationLink to="how-it-works" spy={true} smooth={true} duration={300}>
-      <Link href="#" label="Easy Setup" />
+      <Link href="#" label="How it works" />
     </AnimationLink>
     <AnimationLink to="easy-setup" spy={true} smooth={true} duration={300}>
       <Link href="#" label="Easy Setup" />
@@ -33,7 +33,7 @@ const afterContent = () => (
 const beforeContent = () => (
   <>
     <Logo />
-    <Badge>Experimental</Badge>
+    <Badge>Experiment</Badge>
   </>
 )
 
@@ -51,5 +51,5 @@ export default element
   })
   .theme({
     height: 72,
-    paddingX: 72,
+    paddingX: 16,
   })

@@ -1,10 +1,16 @@
 import React from 'react'
 import { Container, Row, Col } from '@vitus-labs/coolgrid'
 import Heading from 'base/Heading'
-import Button from 'base/Button'
+import button from 'base/Button'
 import Icon from 'base/Icon'
+import Text from 'base/Text'
+import Link from 'base/Link'
 import Wrapper from './Wrapper'
 import InnerBox from './InnerBox'
+
+const Button = button.theme({
+  marginY: 32,
+})
 
 export default () => (
   <Wrapper>
@@ -12,18 +18,24 @@ export default () => (
       <Row>
         <Col>
           <InnerBox>
-            <Heading title>
-              Protect your Web Monetized content with Vanilla
-            </Heading>
+            <Heading title>Web Monetization Content Protection</Heading>
             <Heading tag="h2" subheading>
-              Plug ‘n’ play firewall that verifies Web Monetization payments for
-              every byte of your content.
+              Verify payment stream before sending content
+              <br /> to the user via Vanilla API
             </Heading>
             <Button
               google
               label="Sign in with Google"
               beforeContent={<Icon name="google" />}
             />
+
+            <Text centered>
+              <Text bold>Don't get what we talk about?</Text>
+              <br />
+              <Text secondary>
+                learn more about <Link primary>Web monetization</Link>
+              </Text>
+            </Text>
           </InnerBox>
         </Col>
       </Row>

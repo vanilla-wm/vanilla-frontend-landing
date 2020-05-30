@@ -7,7 +7,8 @@ export default {
   // FONTS
   // --------------------------------------------------------------------------
   fontFamily: {
-    base: 'Open Sans, sans-serif',
+    base: `'Work Sans', sans-serif`,
+    mono: `'Space Mono', monospace`,
   },
 
   lineHeight: {
@@ -47,34 +48,20 @@ export default {
   color: {
     transparent: 'transparent',
     white: '#fff',
-    gray100: '#f8f9fa',
-    gray200: '#e9ecef',
-    gray300: '#dee2e6',
-    gray400: '#ced4da',
-    gray500: '#adb5bd',
-    gray600: '#6c757d',
-    gray700: '#495057',
-    gray800: '#343a40',
-    gray900: '#212529',
+    white400: '#8E8E93',
     black: '#000',
-    overlay: 'rgba(0, 0, 0, 0.7)',
-    overlayContent: 'rgba(0, 0, 0, 0.8)',
-
-    primary: '#A450B3',
-    secondary: '#50B398', // 6c757d
-    success: '#28a745',
-    info: '#17a2b8',
-    warning: '#ffc107',
-    danger: '#EB5757',
-    light: '#f8f9fa',
-    dark: '#343a40',
-    google: '#EB5757',
-    facebook: '#2D9CDB',
+    primary: '#FEB611',
+    primaryHover: 'rgba(254, 182, 17, 0.4)',
   },
 
   // --------------------------------------------------------------------------
   // SPACING, BORDERS, etc.
   // --------------------------------------------------------------------------
+  borderRadius: {
+    sm: 4,
+    base: 14,
+    extra: 160,
+  },
   spacing: {
     reset: 0,
     xxs: 2,

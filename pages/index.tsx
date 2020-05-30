@@ -5,6 +5,7 @@ import Heading from 'sections/Heading'
 import HowItWorks from 'sections/HowItWorks'
 import EasySetup from 'sections/EasySetup'
 import Plugins from 'sections/Plugins'
+import Footer from 'sections/Footer'
 
 export default () => (
   <Root>
@@ -13,5 +14,6 @@ export default () => (
     <HowItWorks />
     <EasySetup />
     <Plugins />
+    <Footer />
   </Root>
 )

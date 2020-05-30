@@ -9,4 +9,5 @@ export default element.config({ name: 'Badge' }).theme((t) => ({
   paddingX: 8,
   paddingY: 2,
   fontWeight: t.fontWeight.bold,
+  fontSize: 12,
 }))

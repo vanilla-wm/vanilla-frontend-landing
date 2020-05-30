@@ -1,5 +1,6 @@
 import { makeItResponsive, styles } from '@vitus-labs/unistyle'
 import { Element, List, Text } from '@vitus-labs/elements'
+import { omit, pick } from '@vitus-labs/core'
 import rocketstyle from '@vitus-labs/rocketstyle'
 
 export const element = rocketstyle()({
@@ -19,13 +20,78 @@ export const element = rocketstyle()({
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
 
-      ${({ onClick, href }) =>
+      /* ${({ onClick, href }) =>
         (onClick || href) &&
         css`
           cursor: pointer;
-        `};
+        `}; */
 
-      ${makeItResponsive({ key: '$rocketstyle', styles, css })};
+      ${({ $rocketstyle, $rocketstate }) => {
+        const baseTheme = {
+          ...omit($rocketstyle, ['base', 'hover', 'focus', 'active']),
+          ...pick($rocketstyle, ['base']).base,
+        }
+
+        const hoverTheme = pick($rocketstyle, ['hover'])
+        const focusTheme = pick($rocketstyle, ['focus'])
+        const activeTheme = pick($rocketstyle, ['active'])
+
+        const _baseTheme = makeItResponsive({
+          theme: baseTheme || {},
+          styles,
+          css,
+        })
+
+        const _hoverTheme = makeItResponsive({
+          theme: hoverTheme.hover || {},
+          styles,
+          css,
+        })
+
+        const _focusTheme = makeItResponsive({
+          theme: focusTheme.focus || {},
+          styles,
+          css,
+        })
+
+        const _activeTheme = makeItResponsive({
+          theme: activeTheme.active || {},
+          styles,
+          css,
+        })
+
+        return css`
+          ${_baseTheme};
+
+          ${!$rocketstate.disabled &&
+          !$rocketstate.active &&
+          css`
+            &:hover {
+              ${_hoverTheme};
+            }
+          `};
+
+          ${!$rocketstate.disabled &&
+          css`
+            &:focus {
+              ${_focusTheme};
+            }
+          `};
+
+          ${!$rocketstate.disabled &&
+          css`
+            &:active {
+              ${_activeTheme};
+            }
+          `};
+
+          ${!$rocketstate.disabled &&
+          $rocketstate.active &&
+          css`
+            ${_activeTheme};
+          `};
+        `
+      }}
     `
   )
 

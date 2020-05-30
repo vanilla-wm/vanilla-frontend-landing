@@ -5,12 +5,17 @@ export default element
   .attrs({ gap: 8 })
   .theme({
     paddingX: 16,
+    transition: 0.3,
   })
-  .states({
+  .states((t) => ({
     google: {
-      backgroundColor: 'rgba(254, 182, 17, 0.2)',
-      borderRadius: 7,
+      backgroundColor: t.color.primary,
+      color: t.color.black,
+      borderRadius: t.borderRadius.extra,
       height: 48,
       fontWeight: 'bold',
+      hover: {
+        backgroundColor: t.color.primaryHover,
+      },
     },
-  })
+  }))
