@@ -1,7 +1,22 @@
 import { theme as grid } from '@vitus-labs/coolgrid'
 
-export default {
+export const coolgrid = {
   ...grid,
+  breakpoints: {
+    ...grid.breakpoints,
+    xxl: 1440,
+  },
+  grid: {
+    ...grid.grid,
+    container: {
+      ...grid.grid.container,
+      xs: '90%',
+      xxl: 1320,
+    },
+  },
+}
+export default {
+  ...coolgrid,
 
   // --------------------------------------------------------------------------
   // FONTS

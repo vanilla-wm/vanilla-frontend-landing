@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react'
 import { Container, Row, Col } from '@vitus-labs/coolgrid'
 import Section from 'base/Section'
 import Heading from 'base/Heading'
-import Text from 'base/Text'
 import Box from './Box'
 import Category from './Category'
 
@@ -63,28 +62,31 @@ export default () => {
         <Row>
           <Heading level1>How it works</Heading>
         </Row>
-        <Row>
-          <Col>
+        <Row gap={32} gutter={0}>
+          <Col size={4}>
             <Category
+              index={1}
               title="Content Request"
               text="User requests content on your web or mobile app"
               onClick={() => boxEvent(0)}
               active={active === 0}
             />
             <Category
+              index={2}
               title="Payment Verification"
               text="Your back-end verifies payment stream using our API"
               onClick={() => boxEvent(1)}
               active={active === 1}
             />
             <Category
+              index={3}
               title="Content Delivery"
               text="You are paid and your user is happy 🎉"
               onClick={() => boxEvent(2)}
               active={active === 2}
             />
           </Col>
-          <Col>{data[active]}</Col>
+          <Col size={7}>{data[active]}</Col>
         </Row>
       </Container>
     </Section>

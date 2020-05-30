@@ -1,7 +1,9 @@
 import React from 'react'
 import { Container, Row, Col } from '@vitus-labs/coolgrid'
+import Box from 'base/Box'
 import Heading from 'base/Heading'
 import button from 'base/Button'
+import Line from 'base/Line'
 import Icon from 'base/Icon'
 import Text from 'base/Text'
 import Link from 'base/Link'
@@ -13,6 +15,8 @@ import Mouse from './Mouse'
 const Button = button.theme({
   marginY: 32,
 })
+
+const LineWrapper = Box.theme({ height: 120 })
 
 export default () => (
   <Wrapper>
@@ -46,6 +50,9 @@ export default () => (
                 </Link>
               </Text>
             </Text>
+            <LineWrapper>
+              <Line vertical />
+            </LineWrapper>
             <Mouse />
             <Text secondary>Scroll down</Text>
           </InnerBox>

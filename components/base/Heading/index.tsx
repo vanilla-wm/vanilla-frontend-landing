@@ -1,6 +1,6 @@
-import { text } from 'base/base'
+import { element } from 'base/base'
 
-export default text
+export default element
   .config({ name: 'Heading' })
   .attrs({ tag: 'h1', contentAlignX: 'left' })
   .theme((t) => ({
@@ -22,9 +22,9 @@ export default text
       color: t.color.primary,
     },
     level1: {
-      fontSize: 32,
+      fontSize: { xs: 24, md: 32 },
       fontWeight: t.fontWeight.bold,
-      marginBottom: 48,
+      marginBottom: { xs: 24, md: 48 },
       backgroundColor: t.color.primary,
       color: t.color.black,
       borderRadius: 60,
@@ -33,7 +33,7 @@ export default text
       paddingX: 32,
     },
     level2: {
-      fontSize: 24,
+      fontSize: { xs: 20, md: 24 },
       fontWeight: t.fontWeight.semibold,
       marginY: 16,
     },

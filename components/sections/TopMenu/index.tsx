@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import { Link as AnimationLink } from 'react-scroll'
 import { throttle } from 'lodash'
-import { element } from 'base/base'
+import { Container } from '@vitus-labs/coolgrid'
+import { element as Element } from 'base/base'
 import LinkList from 'base/LinkList'
 import Link from 'base/Link'
 import Icon from 'base/Icon'
@@ -38,8 +39,7 @@ const beforeContent = () => (
   </>
 )
 
-const Wrapper = element
-  .config({ name: 'section/TopMenu/Wrapper' })
+const Wrapper = Element.config({ name: 'section/TopMenu/Wrapper' })
   .attrs({
     id: 'home',
     block: true,
@@ -48,8 +48,7 @@ const Wrapper = element
     height: 72,
   })
 
-const Inner = element
-  .config({ name: 'section/TopMenu/Inner' })
+const Inner = Element.config({ name: 'section/TopMenu/Inner' })
   .attrs({
     id: 'home',
     block: true,
@@ -97,7 +96,11 @@ export default (props) => {
 
   return (
     <Wrapper>
-      <Inner {...props} sticked={sticked} />
+      <Inner sticked={sticked}>
+        <Container>
+          <Element {...props} />
+        </Container>
+      </Inner>
     </Wrapper>
   )
 }
