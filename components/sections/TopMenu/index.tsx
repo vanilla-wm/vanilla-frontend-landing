@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import useWindowSize from '@rehooks/window-size'
 import { Link as AnimationLink } from 'react-scroll'
 import { throttle } from 'lodash'
 import { Container } from '@vitus-labs/coolgrid'
@@ -73,8 +74,6 @@ const Inner = Element.config({ name: 'section/TopMenu/Inner' })
 
 const Content = Element.attrs({
   block: true,
-  beforeContent,
-  afterContent,
   beforeContentCss: `
       & > * + * { 
         margin-left: 12px
@@ -82,7 +81,14 @@ const Content = Element.attrs({
 })
 
 export default (props) => {
+  let windowSize = {}
+  if (process.browser) {
+    windowSize = useWindowSize()
+  }
+
   const [sticked, setSticked] = useState(false)
+
+  const showHamburger = windowSize.innerWidth < 992
 
   const handleScroll = (e) => {
     window.scrollY === 0 ? setSticked(false) : setSticked(true)
@@ -102,7 +108,11 @@ export default (props) => {
     <Wrapper>
       <Inner sticked={sticked}>
         <Container data-test="container">
-          <Content {...props} />
+          <Content
+            {...props}
+            beforeContent={beforeContent}
+            afterContent={showHamburger ? null : afterContent}
+          />
         </Container>
       </Inner>
     </Wrapper>

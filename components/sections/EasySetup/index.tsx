@@ -47,7 +47,7 @@ export default () => {
         >
           <Col>
             <ItemBox>
-              {showLine && <Line />}
+              {showLine ? <Line /> : null}
               <Box icon>
                 <Icon name="account" />
               </Box>
@@ -62,7 +62,7 @@ export default () => {
           </Col>
           <Col>
             <ItemBox>
-              {showLine && <Line />}
+              {showLine ? <Line /> : null}
               <Box icon>
                 <Icon name="payment-pointer" />
               </Box>
@@ -72,7 +72,7 @@ export default () => {
           </Col>
           <Col>
             <ItemBox>
-              {showLine && <Line />}
+              {showLine ? <Line /> : null}
               <Box icon>
                 <Icon name="code-snippet" />
               </Box>

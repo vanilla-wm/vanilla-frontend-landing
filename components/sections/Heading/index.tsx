@@ -1,4 +1,5 @@
 import React from 'react'
+import useWindowSize from '@rehooks/window-size'
 import { Container, Row, Col } from '@vitus-labs/coolgrid'
 import Box from 'base/Box'
 import Heading from 'base/Heading'
@@ -18,46 +19,55 @@ const Button = button.theme({
 
 const LineWrapper = Box.theme({ height: 120 })
 
-export default () => (
-  <Wrapper>
-    <Parallax />
-    <Container>
-      <Row>
-        <Col>
-          <InnerBox>
-            <Heading title>Web Monetization Content Protection</Heading>
-            <Heading tag="h2" subheading>
-              Verify payment stream before sending content
-              <br /> to the user via Vanilla API
-            </Heading>
-            <Button
-              google
-              label="Sign in with Google"
-              beforeContent={<Icon name="google" />}
-            />
+export default () => {
+  let windowSize = {}
+  if (process.browser) {
+    windowSize = useWindowSize()
+  }
 
-            <Text centered>
-              <Text bold>Don't get what we talk about?</Text>
-              <br />
-              <Text secondary>
-                learn more about{' '}
-                <Link
-                  primary
-                  href="https://webmonetization.org/"
-                  target="_blank"
-                >
-                  Web monetization
-                </Link>
+  const showParallax = windowSize.innerWidth >= 768
+
+  return (
+    <Wrapper>
+      {showParallax && <Parallax />}
+      <Container>
+        <Row>
+          <Col>
+            <InnerBox>
+              <Heading title>Web Monetization Content Protection</Heading>
+              <Heading tag="h2" subheading>
+                Verify payment stream before sending content
+                <br /> to the user via Vanilla API
+              </Heading>
+              <Button
+                google
+                label="Sign in with Google"
+                beforeContent={<Icon name="google" />}
+              />
+
+              <Text centered>
+                <Text bold>Don't get what we talk about?</Text>
+                <br />
+                <Text secondary>
+                  learn more about{' '}
+                  <Link
+                    primary
+                    href="https://webmonetization.org/"
+                    target="_blank"
+                  >
+                    Web monetization
+                  </Link>
+                </Text>
               </Text>
-            </Text>
-            <LineWrapper>
-              <Line vertical />
-            </LineWrapper>
-            <Mouse />
-            <Text secondary>Scroll down</Text>
-          </InnerBox>
-        </Col>
-      </Row>
-    </Container>
-  </Wrapper>
-)
+              <LineWrapper>
+                <Line vertical />
+              </LineWrapper>
+              <Mouse />
+              <Text secondary>Scroll down</Text>
+            </InnerBox>
+          </Col>
+        </Row>
+      </Container>
+    </Wrapper>
+  )
+}

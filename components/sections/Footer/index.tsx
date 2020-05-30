@@ -1,7 +1,6 @@
 import React from 'react'
 import useWindowSize from '@rehooks/window-size'
 import { Container, Row, Col } from '@vitus-labs/coolgrid'
-import { element } from 'base/base'
 import styled from 'styled-components'
 import box from 'base/Box'
 import Heading from 'base/Heading'
@@ -57,6 +56,7 @@ export default () => {
   }
 
   const showShape = windowSize.innerWidth >= 768
+  const showEmptyHeading = windowSize.innerWidth >= 576
 
   return (
     <Box>
@@ -83,10 +83,14 @@ export default () => {
             </Heading>
             <List data={dataListB} />
           </Col>
-          <Col component={element} contentAlignY="bottom">
+          <Col>
+            {showEmptyHeading && (
+              <Heading dark level2>
+                &nbsp;
+              </Heading>
+            )}
             <List data={dataListC} />
           </Col>
-          <Col></Col>
         </Row>
         <FooterBox contentDirection="inline">
           <Text dark sm>
