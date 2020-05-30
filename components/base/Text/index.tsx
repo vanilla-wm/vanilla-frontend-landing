@@ -7,6 +7,15 @@ export default text
     secondary: {
       color: '#8E8E93',
     },
+    dark: {
+      color: '#000000',
+    },
+    light: {
+      color: '#AEAEB2',
+    },
+  })
+  .sizes({
+    sm: { fontSize: 14 },
   })
   .multiple({
     bold: {

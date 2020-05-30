@@ -1,15 +1,83 @@
 import React from 'react'
+import { Container, Row, Col } from '@vitus-labs/coolgrid'
+import styled from 'styled-components'
 import box from 'base/Box'
+import Heading from 'base/Heading'
+import Text from 'base/Text'
+import List from 'base/List'
+import shape from 'base/Shape'
 
-const Box = box
-  .attrs({
-    contentAlignX: 'center',
-  })
-  .theme((t) => ({
-    height: 48,
-    backgroundColor: t.color.primary,
-    color: t.color.black,
-    fontWeight: 'bold',
-  }))
+const dataListA = [
+  { label: 'Vanilla Home', link: 'https://vanilla.so' },
+  { label: 'Vanilla Admin', link: 'https://vanilla.so' },
+  { label: 'Terms of Services', link: 'https://vanilla.so' },
+  { label: 'Privacy Policy', link: 'https://vanilla.so' },
+]
 
-export default () => <Box>Created during hackhaton by</Box>
+const dataListB = [
+  { label: 'Grant for the web', link: 'https://vanilla.so' },
+  { label: 'Coil', link: 'https://vanilla.so' },
+  { label: 'Cinnamon', link: 'https://vanilla.so' },
+  { label: 'Puma Browser', link: 'https://vanilla.so' },
+]
+
+const dataListC = [
+  { label: 'Web Monetization', link: 'https://vanilla.so' },
+  { label: 'Interledger', link: 'https://vanilla.so' },
+  { label: 'GateHub', link: 'https://vanilla.so' },
+  { label: 'Uphold', link: 'https://vanilla.so' },
+]
+
+const Box = box.theme((t) => ({
+  backgroundColor: t.color.primary,
+  color: t.color.black,
+  paddingY: 100,
+  overflow: 'hidden',
+}))
+
+const FooterBox = box.theme({
+  marginTop: 32,
+})
+
+const Shape = styled(shape).attrs({
+  name: 'vanilla',
+})`
+  position: absolute;
+  right: 0;
+  top: 0;
+`
+
+export default () => (
+  <Box>
+    <Container size={{ xs: 12, md: 3 }} gap={{ xs: 20, md: 80 }} gutter={0}>
+      <Heading level1>
+        Project Vanilla is developed as a part of Grant for the Web hackathon by
+        Cinnamon.
+      </Heading>
+      <Row>
+        <Col>
+          <Heading dark level2>
+            Sitemap
+          </Heading>
+          <List data={dataListA} />
+        </Col>
+        <Col>
+          <Heading dark level2>
+            Learn more
+          </Heading>
+          <List data={dataListB} />
+        </Col>
+        <Col>
+          <List data={dataListC} />
+        </Col>
+        <Col></Col>
+      </Row>
+      <FooterBox>
+        <Text dark sm>
+          Created with love over the weekend in Prague, Czech republic by
+        </Text>
+      </FooterBox>
+    </Container>
+    <Shape />
+  </Box>
+)

@@ -11,28 +11,39 @@ export default () => (
       <Row>
         <Heading level1>Plugins</Heading>
       </Row>
-      <Row size={{ xs: 12, sm: 6, md: 3 }}>
-        <Col>
+      <Row>
+        <Col size={{ xs: 12, sm: 6, md: 2 }}>
           <Box>
-            <Heading primary level2 label="Wordpress" />
+            <Box icon>hello</Box>
+            <Heading level2 label="Wordpress" />
             <Text>Some text here</Text>
           </Box>
         </Col>
-        <Col>
+        <Col size={{ xs: 12, sm: 6, md: 2 }}>
           <Box>
-            <Heading primary level2 label="Express.js" />
+            <Box icon>hello</Box>
+            <Heading level2 label="Express.js" />
             <Text>Some text here</Text>
           </Box>
         </Col>
-        <Col>
+        <Col size={{ xs: 12, sm: 6, md: 2 }}>
           <Box>
-            <Heading primary level2 label="Code Snippet" />
+            <Box icon>hello</Box>
+            <Heading level2 label="Code Snippet" />
             <Text>Some text here</Text>
           </Box>
         </Col>
-        <Col>
+        <Col size={{ xs: 12, sm: 6, md: 2 }}>
           <Box>
-            <Heading primary level2 label="API" />
+            <Box icon>hello</Box>
+            <Heading level2 label="API" />
+            <Text>Some text here</Text>
+          </Box>
+        </Col>
+        <Col size={{ xs: 12, sm: 6, md: 4 }}>
+          <Box>
+            <Box icon>hello</Box>
+            <Heading level2 label="API" />
             <Text>Some text here</Text>
           </Box>
         </Col>

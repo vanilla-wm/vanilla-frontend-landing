@@ -5,6 +5,7 @@ const shapes = {
   square: require('assets/shapes/square.svg'),
   rectangle: require('assets/shapes/rectangle.svg'),
   circle: require('assets/shapes/circle.svg'),
+  vanilla: require('assets/shapes/vanilla.svg'),
 }
 
 export default element.config({ name: 'Shape' }).attrs(({ name }) => ({

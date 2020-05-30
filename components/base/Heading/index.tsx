@@ -16,7 +16,7 @@ export default element
   }))
   .variants((t) => ({
     title: {
-      fontSize: 36,
+      fontSize: { xs: 28, md: 36 },
       fontWeight: t.fontWeight.bold,
       marginBottom: 24,
       color: t.color.primary,
@@ -44,7 +44,13 @@ export default element
     },
     subheading: {
       fontFamily: t.fontFamily.base,
-      fontSize: 24,
+      fontWeight: 'normal',
+      fontSize: { xs: 18, md: 24 },
       color: '#8E8E93',
+    },
+  }))
+  .multiple((t) => ({
+    dark: {
+      color: t.color.black,
     },
   }))

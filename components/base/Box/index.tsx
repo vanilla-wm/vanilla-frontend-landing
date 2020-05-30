@@ -13,7 +13,7 @@ export default element
       width: 140,
       borderRadius: 40,
       borderRadiusTopLeft: 0,
-      backgroundColor: '#3A3A3C',
+      backgroundColor: '#202020',
       marginBottom: 16,
     },
   })

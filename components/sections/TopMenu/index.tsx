@@ -35,7 +35,7 @@ const afterContent = () => (
 const beforeContent = () => (
   <>
     <Logo />
-    <Badge>Experiment</Badge>
+    <Badge>Experimental</Badge>
   </>
 )
 
@@ -52,12 +52,6 @@ const Inner = Element.config({ name: 'section/TopMenu/Inner' })
   .attrs({
     id: 'home',
     block: true,
-    beforeContent,
-    afterContent,
-    beforeContentCss: `
-      & > * + * { 
-        margin-left: 12px
-    }`,
   })
   .theme((t) => ({
     boxSizing: 'content-box',
@@ -76,6 +70,16 @@ const Inner = Element.config({ name: 'section/TopMenu/Inner' })
       borderBottom: `1px solid #48484A`,
     },
   })
+
+const Content = Element.attrs({
+  block: true,
+  beforeContent,
+  afterContent,
+  beforeContentCss: `
+      & > * + * { 
+        margin-left: 12px
+    }`,
+})
 
 export default (props) => {
   const [sticked, setSticked] = useState(false)
@@ -97,8 +101,8 @@ export default (props) => {
   return (
     <Wrapper>
       <Inner sticked={sticked}>
-        <Container>
-          <Element {...props} />
+        <Container data-test="container">
+          <Content {...props} />
         </Container>
       </Inner>
     </Wrapper>

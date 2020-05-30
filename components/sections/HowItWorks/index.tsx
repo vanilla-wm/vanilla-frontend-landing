@@ -31,12 +31,9 @@ export default () => {
   }
 
   const boxEvent = (id) => {
-    reset()
-    setActive(id)
-
-    if (isCounterActive && id === active) setCounterActive(false)
-    else {
-      setCounterActive(true)
+    if (id !== active) {
+      reset()
+      setActive(id)
     }
   }
 
@@ -63,7 +60,7 @@ export default () => {
           <Heading level1>How it works</Heading>
         </Row>
         <Row gap={32} gutter={0}>
-          <Col size={4}>
+          <Col size={{ xs: 12, md: 4 }}>
             <Category
               index={1}
               title="Content Request"
@@ -86,7 +83,7 @@ export default () => {
               active={active === 2}
             />
           </Col>
-          <Col size={7}>{data[active]}</Col>
+          <Col size={{ xs: 12, md: 7 }}>{data[active]}</Col>
         </Row>
       </Container>
     </Section>

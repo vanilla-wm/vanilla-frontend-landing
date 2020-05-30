@@ -14,34 +14,20 @@ const Box = box.styles(
 
 const NumberWrapper = box.theme({ height: 30, width: 30, marginRight: 16 })
 
-// const Number = element
-//   .attrs({ contentAlignX: 'center' })
-//   .theme((t) => ({
-//     height: 30,
-//     width: 30,
-//     border: `3px solid white`,
-//     borderRadius: 160,
-//     marginRight: 16,
-//     active: {
-//       borderColor: t.color.primary,
-//       color: t.color.primary,
-//     },
-//   }))
-//   .multiple({ active: true })
-
 export default ({ active, onClick, title, text, index }) => (
-  <Box innerSpaceLg onClick={onClick}>
-    <Heading
-      primary={active}
-      level2
-      beforeContent={
-        <NumberWrapper>
-          <Number active={active} label={index} />
-        </NumberWrapper>
-      }
-    >
+  <Box
+    innerSpaceLg
+    onClick={onClick}
+    beforeContentAlignY="top"
+    beforeContent={
+      <NumberWrapper>
+        <Number active={active} label={index} />
+      </NumberWrapper>
+    }
+  >
+    <Heading primary={active} level2>
       {title}
     </Heading>
-    <Text>{text}</Text>
+    <Text light>{text}</Text>
   </Box>
 )

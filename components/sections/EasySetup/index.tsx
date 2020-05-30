@@ -1,11 +1,16 @@
 import React from 'react'
 import { Container, Row, Col } from '@vitus-labs/coolgrid'
-import Section from 'base/Section'
+import section from 'base/Section'
 import Heading from 'base/Heading'
 import Box from 'base/Box'
 import Icon from 'base/Icon'
 import Text from 'base/Text'
+import Link from 'base/Link'
 import line from 'base/Line'
+
+const Section = section.theme({
+  backgroundColor: '#101010',
+})
 
 const Line = line.theme({
   position: 'absolute',
@@ -31,7 +36,12 @@ export default () => (
               <Icon name="account" />
             </Box>
             <Heading level2 label="Vanilla Account" />
-            <Text>Create Vanilla account by singing up with Google</Text>
+            <Text light>
+              Create Vanilla account by{' '}
+              <Link primary href="">
+                singing up with Google
+              </Link>
+            </Text>
           </ItemBox>
         </Col>
         <Col>
@@ -41,7 +51,7 @@ export default () => (
               <Icon name="payment-pointer" />
             </Box>
             <Heading level2 label="Payment Pointer" />
-            <Text>Add Payment Pointer to Wallet of your choice</Text>
+            <Text light>Add Payment Pointer to Wallet of your choice</Text>
           </ItemBox>
         </Col>
         <Col>
@@ -51,17 +61,16 @@ export default () => (
               <Icon name="code-snippet" />
             </Box>
             <Heading level2 label="Code Snippet" />
-            <Text>Place generate Code Snippet to head of your HTML</Text>
+            <Text light>Place generate Code Snippet to head of your HTML</Text>
           </ItemBox>
         </Col>
         <Col>
           <ItemBox>
-            <Line />
             <Box icon>
               <Icon name="api" />
             </Box>
             <Heading level2 label="API" />
-            <Text>Call our API whenever you want to verify payments</Text>
+            <Text light>Call our API whenever you want to verify payments</Text>
           </ItemBox>
         </Col>
       </Row>
