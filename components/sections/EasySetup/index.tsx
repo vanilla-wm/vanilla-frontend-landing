@@ -1,5 +1,6 @@
 import React from 'react'
 import { Container, Row, Col } from '@vitus-labs/coolgrid'
+import { element } from 'base/base'
 import Section from 'base/Section'
 import Heading from 'base/Heading'
 import Box from 'base/Box'
@@ -7,15 +8,34 @@ import Icon from 'base/Icon'
 import Text from 'base/Text'
 // import Box from './Box'
 
+const Line = element
+  .theme({
+    position: 'absolute',
+    top: 70,
+    left: 30,
+    height: 3,
+    width: '100%',
+  })
+  .styles(
+    (css) => css`
+      background: linear-gradient(
+        90deg,
+        #3a3a3c 50.84%,
+        rgba(58, 58, 60, 0) 96.32%
+      );
+    `
+  )
+
 export default () => (
   <Section id="easy-setup">
     <Container>
       <Row>
         <Heading level1>Easy setup</Heading>
       </Row>
-      <Row size={{ xs: 12, sm: 6, md: 3 }}>
+      <Row gap={16} size={{ xs: 12, sm: 6, md: 3 }}>
         <Col>
           <Box>
+            <Line />
             <Box icon>
               <Icon name="account" />
             </Box>
@@ -25,6 +45,7 @@ export default () => (
         </Col>
         <Col>
           <Box>
+            <Line />
             <Box icon>
               <Icon name="payment-pointer" />
             </Box>
@@ -34,6 +55,7 @@ export default () => (
         </Col>
         <Col>
           <Box>
+            <Line />
             <Box icon>
               <Icon name="code-snippet" />
             </Box>
@@ -43,6 +65,7 @@ export default () => (
         </Col>
         <Col>
           <Box>
+            <Line />
             <Box icon>
               <Icon name="api" />
             </Box>

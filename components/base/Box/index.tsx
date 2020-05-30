@@ -14,5 +14,6 @@ export default element
       borderRadius: 40,
       borderRadiusTopLeft: 0,
       backgroundColor: '#3A3A3C',
+      marginBottom: 16,
     },
   })
