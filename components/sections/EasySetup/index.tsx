@@ -30,76 +30,81 @@ export default () => {
     windowSize = useWindowSize()
   }
 
-  const showLine = !!windowSize.innerWidth >= 768
+  const showLine = windowSize.innerWidth >= 768
+  const centeredText = windowSize.innerWidth < 768
 
   return (
     <Section id="easy-setup">
       <Container>
         <Row>
-          <Heading level1>Easy setup</Heading>
-        </Row>
-        <Row
-          component={element}
-          contentAlignX="center"
-          gap={64}
-          size={{ xs: 8, sm: 6, lg: 3 }}
-          gutter={0}
-        >
-          <Col>
-            <ItemBox>
-              {showLine && <Line />}
-              <Box icon>
-                <Icon name="account" />
-              </Box>
-              <Heading level2 label="Vanilla Account" />
-              <Text light>
-                Create Vanilla account by{' '}
-                <Link primary href="">
-                  singing up with Google
-                </Link>
-              </Text>
-            </ItemBox>
-          </Col>
-          <Col>
-            <ItemBox>
-              {showLine && <Line />}
-              <Box icon>
-                <Icon name="payment-pointer" />
-              </Box>
-              <Heading level2 label="Payment Pointer" />
-              <Text light>
-                Add Payment Pointer to{' '}
-                <Link primary href="">
-                  Wallet
-                </Link>{' '}
-                of your choice
-              </Text>
-            </ItemBox>
-          </Col>
-          <Col>
-            <ItemBox>
-              {showLine && <Line />}
-              <Box icon>
-                <Icon name="code-snippet" />
-              </Box>
-              <Heading level2 label="Code Snippet" />
-              <Text light>
-                Place generate Code Snippet to head of your HTML
-              </Text>
-            </ItemBox>
-          </Col>
-          <Col>
-            <ItemBox>
-              <Box icon>
-                <Icon name="api" />
-              </Box>
-              <Heading level2 label="API" />
-              <Text light>
-                Call our API whenever you want to verify payments
-              </Text>
-            </ItemBox>
+          <Col component={element} contentAlignX={{ xs: 'center', md: 'left' }}>
+            <Heading level1>Easy setup</Heading>
           </Col>
         </Row>
+        {windowSize.innerWidth && (
+          <Row
+            component={element}
+            contentAlignX="center"
+            gap={64}
+            size={{ xs: 8, sm: 6, lg: 3 }}
+            gutter={0}
+          >
+            <Col>
+              <ItemBox>
+                {showLine && <Line />}
+                <Box icon>
+                  <Icon name="account" />
+                </Box>
+                <Heading level2 label="Vanilla Account" />
+                <Text light centered={centeredText}>
+                  Create Vanilla account by{' '}
+                  <Link primary href="">
+                    singing up with Google
+                  </Link>
+                </Text>
+              </ItemBox>
+            </Col>
+            <Col>
+              <ItemBox>
+                {showLine && <Line />}
+                <Box icon>
+                  <Icon name="payment-pointer" />
+                </Box>
+                <Heading level2 label="Payment Pointer" />
+                <Text light centered={centeredText}>
+                  Add Payment Pointer to{' '}
+                  <Link primary href="">
+                    Wallet
+                  </Link>{' '}
+                  of your choice
+                </Text>
+              </ItemBox>
+            </Col>
+            <Col>
+              <ItemBox>
+                {showLine && <Line />}
+                <Box icon>
+                  <Icon name="code-snippet" />
+                </Box>
+                <Heading level2 label="Code Snippet" />
+                <Text light centered={centeredText}>
+                  Place generate Code Snippet to head of your HTML
+                </Text>
+              </ItemBox>
+            </Col>
+            <Col>
+              <ItemBox>
+                <Box icon>
+                  <Icon name="api" />
+                </Box>
+                <Heading level2 label="API" />
+                <Text light centered={centeredText}>
+                  Call our API whenever you want to verify payments
+                </Text>
+              </ItemBox>
+            </Col>
+          </Row>
+        )}
       </Container>
     </Section>
   )

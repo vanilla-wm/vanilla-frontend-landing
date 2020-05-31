@@ -9,6 +9,7 @@ export default element
   .variants({
     vertical: {
       width: 100,
+      marginTop: 16,
       transform: 'rotate(90deg)',
     },
   })

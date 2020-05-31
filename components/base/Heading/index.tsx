@@ -33,12 +33,12 @@ export default element
       borderRadiusBottomLeft: 0,
       paddingY: 12,
       paddingX: 32,
-      extendCss: css`
-        align-self: flex-start;
-      `,
+      // extendCss: css`
+      //   align-self: flex-start;
+      // `,
     },
     level2: {
-      fontSize: { xs: 20, xl: 24 },
+      fontSize: { xs: 18, xl: 24 },
       fontWeight: t.fontWeight.semibold,
       marginY: 16,
     },

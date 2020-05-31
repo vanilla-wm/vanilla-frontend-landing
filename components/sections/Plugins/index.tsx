@@ -5,46 +5,50 @@ import Section from 'base/Section'
 import Heading from 'base/Heading'
 import Box from 'base/Box'
 
+const ItemBox = Box.attrs({
+  contentAlignX: { xs: 'center', lg: 'left' },
+})
+
 export default () => (
   <Section id="plugins">
     <Container>
       <Row>
-        <Col css="align-items: flex-start;">
+        <Col component={element} contentAlignX={{ xs: 'center', md: 'left' }}>
           <Heading level1>Plugins</Heading>
         </Col>
       </Row>
       <Row
         component={element}
-        contentAlignX={{ xs: 'center', md: 'left' }}
+        contentAlignX={{ xs: 'center', lg: 'left' }}
         contentAlignY="top"
-        size={{ xs: 12, sm: 4, md: 3, lg: 2 }}
+        size={{ xs: 8, sm: 4, md: 3, lg: 2 }}
         gap={{ xs: 16, sm: 32 }}
       >
         <Col>
-          <Box>
+          <ItemBox>
             <Box icon>Coming soon</Box>
             <Heading level2 centered label="Wordpress" />
-          </Box>
+          </ItemBox>
         </Col>
         <Col>
-          <Box>
+          <ItemBox>
             <Box icon>Coming soon</Box>
             <Heading level2 centered label="Express.js" />
-          </Box>
+          </ItemBox>
         </Col>
         <Col>
-          <Box>
+          <ItemBox>
             <Box icon>Coming soon</Box>
             <Heading level2 centered label="Apache" />
-          </Box>
+          </ItemBox>
         </Col>
         <Col>
-          <Box>
+          <ItemBox>
             <Box icon>Coming soon</Box>
             <Heading level2 centered label="Nginx" />
-          </Box>
+          </ItemBox>
         </Col>
-        <Col size={{ xs: 12, sm: 6, md: 4, lg: 3 }}>
+        <Col size={{ xs: 8, sm: 6, md: 4, lg: 3 }}>
           <Box>
             <Box icon iconBigger>
               Want to help us?

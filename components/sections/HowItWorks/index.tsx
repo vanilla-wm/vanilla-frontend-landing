@@ -1,20 +1,29 @@
 import React, { useState, useEffect } from 'react'
 import { Container, Row, Col } from '@vitus-labs/coolgrid'
 import Section from 'base/Section'
-import Heading from 'base/Heading'
+import heading from 'base/Heading'
 import Category from './Category'
 import AnimBackground from './AnimBackground'
 import Step1 from './animations/Step1'
 import Step2 from './animations/Step2'
 import Step3 from './animations/Step3'
 
-const TIMEOUT = 9000
+const TIMEOUT = 8000
 
 const data = {
   0: <Step1 />,
   1: <Step2 />,
   2: <Step3 />,
 }
+
+const Heading = heading.styles(
+  (css) => css`
+    align-self: center;
+    @media screen and (min-width: 768px) {
+      align-self: center;
+    }
+  `
+)
 
 export default () => {
   const iterate = () => {
