@@ -3,6 +3,7 @@ import { Container, Row, Col } from '@vitus-labs/coolgrid'
 import Section from 'base/Section'
 import Heading from 'base/Heading'
 import Category from './Category'
+import AnimBackground from './AnimBackground'
 import Step1 from './animations/Step1'
 import Step2 from './animations/Step2'
 import Step3 from './animations/Step3'
@@ -58,11 +59,9 @@ export default () => {
   return (
     <Section id="how-it-works">
       <Container>
-        <Row>
-          <Heading level1>How it works</Heading>
-        </Row>
-        <Row gap={32} gutter={0}>
-          <Col size={{ xs: 12, md: 4 }}>
+        <Row gap={{ xs: 32, xl: 64 }} gutter={0}>
+          <Col size={{ xs: 12, lg: 4 }}>
+            <Heading level1>How it works</Heading>
             <Category
               index={1}
               title="Content Request"
@@ -85,7 +84,10 @@ export default () => {
               active={active === 2}
             />
           </Col>
-          <Col size={{ xs: 12, md: 7 }}>{data[active]}</Col>
+          <Col size={{ xs: 12, lg: 8 }}>
+            <AnimBackground />
+            {data[active]}
+          </Col>
         </Row>
       </Container>
     </Section>

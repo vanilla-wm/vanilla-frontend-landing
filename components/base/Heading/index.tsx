@@ -15,7 +15,7 @@ export default element
       color: t.color.primary,
     },
   }))
-  .variants((t) => ({
+  .variants((t, css) => ({
     title: {
       fontSize: { xs: 28, md: 36 },
       fontWeight: t.fontWeight.bold,
@@ -33,9 +33,12 @@ export default element
       borderRadiusBottomLeft: 0,
       paddingY: 12,
       paddingX: 32,
+      extendCss: css`
+        align-self: flex-start;
+      `,
     },
     level2: {
-      fontSize: { xs: 20, md: 24 },
+      fontSize: { xs: 20, xl: 24 },
       fontWeight: t.fontWeight.semibold,
       marginY: 16,
     },

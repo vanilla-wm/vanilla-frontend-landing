@@ -42,7 +42,7 @@ export default () => {
           component={element}
           contentAlignX="center"
           gap={64}
-          size={{ xs: 10, sm: 6, lg: 3 }}
+          size={{ xs: 8, sm: 6, lg: 3 }}
           gutter={0}
         >
           <Col>

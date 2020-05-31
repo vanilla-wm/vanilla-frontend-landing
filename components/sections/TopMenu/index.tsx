@@ -67,7 +67,7 @@ export default (props) => {
   }
 
   const [sticked, setSticked] = useState(false)
-  const [isOpenMenu, setOpenMenu] = useState(true)
+  const [isOpenMenu, setOpenMenu] = useState(false)
 
   const showHamburger = windowSize.innerWidth < 992
 
