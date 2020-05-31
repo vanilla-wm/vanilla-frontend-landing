@@ -27,6 +27,7 @@ const Wrapper = Element.config({ name: 'section/TopMenu/Wrapper' })
   })
   .theme({
     height: 72,
+    overflow: 'hidden',
   })
 
 const Inner = Element.config({ name: 'section/TopMenu/Inner' })
@@ -35,20 +36,20 @@ const Inner = Element.config({ name: 'section/TopMenu/Inner' })
     block: true,
   })
   .theme((t) => ({
-    boxSizing: 'content-box',
     position: 'fixed',
     top: 0,
     left: 0,
     right: 0,
     height: 'inherit',
-    width: 'inherit',
     backgroundColor: t.color.black,
     paddingX: 16,
     zIndex: 100,
+    transition: '0.3s',
+    borderBottom: `1px solid black`,
   }))
   .variants({
     sticked: {
-      borderBottom: `1px solid #48484A`,
+      borderColor: '#48484A',
     },
   })
 
