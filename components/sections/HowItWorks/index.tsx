@@ -8,7 +8,7 @@ import Step1 from './animations/Step1'
 import Step2 from './animations/Step2'
 import Step3 from './animations/Step3'
 
-const TIMEOUT = 6000
+const TIMEOUT = 9000
 
 const data = {
   0: <Step1 />,
