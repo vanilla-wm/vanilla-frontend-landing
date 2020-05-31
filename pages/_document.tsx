@@ -38,7 +38,45 @@ export default class MyDocument extends Document<Props> {
     return (
       <html lang="en" dir="ltr">
         <Head>
+          <title>Vanilla - Web Monetization Verifier</title>
           <meta charSet="utf-8" />
+          <meta name="title" content="Vanilla - Web Monetization Verifier" />
+          <meta
+            name="description"
+            content="Verify payment streams before showing exclusive content to users."
+          />
+          <meta
+            name="keywords"
+            content="Content, Creators, Cinnamon, Web, Monetization, Web Monetization, Interledger, Grant for the Web, Grant, Coil, Payments"
+          />
+          <meta name="robots" content="index, follow" />
+          <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
+          <meta name="language" content="English" />
+
+          <meta property="og:type" content="website" />
+          <meta property="og:url" content="https://vanilla.so/" />
+          <meta
+            property="og:title"
+            content="Vanilla - Web Monetization Verifier"
+          />
+          <meta
+            property="og:description"
+            content="Verify payment streams before showing exclusive content to users."
+          />
+          <meta property="og:image" content="LINK TO IMAGE HERE.png" />
+
+          <meta property="twitter:card" content="summary_large_image" />
+          <meta property="twitter:url" content="https://vanilla.so/" />
+          <meta
+            property="twitter:title"
+            content="Vanilla - Web Monetization Verifier"
+          />
+          <meta
+            property="twitter:description"
+            content="Verify payment streams before showing exclusive content to users."
+          />
+          <meta property="twitter:image" content="LINK TO IMAGE HERE.png" />
+
           <meta name="google" content="nositelinkssearchbox" />
           <meta name="format-detection" content="telephone=no" />
           <meta name="google" content="notranslate" />
@@ -49,6 +87,12 @@ export default class MyDocument extends Document<Props> {
           <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
           <meta name="robots" content="index,follow" />
           <meta name="googlebot" content="index,follow" />
+          <link
+            rel="preconnect"
+            href="https://fonts.gstatic.com/"
+            crossOrigin="anonymous"
+          ></link>
+
           <link
             href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;700&display=swap"
             rel="stylesheet"

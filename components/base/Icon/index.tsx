@@ -13,4 +13,5 @@ const icons = {
 export default element.config({ name: 'Icon' }).attrs(({ name }) => ({
   tag: 'img',
   src: icons[name],
+  alt: '',
 }))

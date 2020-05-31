@@ -34,10 +34,11 @@ export default () => {
         <Row>
           <Col>
             <InnerBox>
-              <Heading title>Web Monetization Verification</Heading>
+              <Heading title>Web Monetization Verifier</Heading>
               <Heading tag="h2" subheading>
-                Verify payment streams before sending content
-                <br /> to users via Vanilla API
+                Verify payment streams before showing exclusive content
+                <br />
+                to users via Vanilla API
               </Heading>
               <Button
                 google

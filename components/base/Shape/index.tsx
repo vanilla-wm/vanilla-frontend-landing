@@ -11,4 +11,5 @@ const shapes = {
 export default element.config({ name: 'Shape' }).attrs(({ name }) => ({
   tag: 'img',
   src: shapes[name],
+  alt: '',
 }))
