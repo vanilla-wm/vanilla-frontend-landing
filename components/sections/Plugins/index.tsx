@@ -3,12 +3,21 @@ import { Container, Row, Col } from '@vitus-labs/coolgrid'
 import { element } from 'base/base'
 import Section from 'base/Section'
 import Heading from 'base/Heading'
-import Link from 'base/Link'
+import link from 'base/Link'
 import Box from 'base/Box'
 
 const ItemBox = Box.attrs({
   contentAlignX: { xs: 'center', lg: 'left' },
 })
+
+const MailTo = link.styles(
+  (css) => css`
+    align-self: center;
+    @media screen and (min-width: 768px) {
+      align-self: flex-start;
+    }
+  `
+)
 
 export default () => (
   <Section id="plugins">
@@ -52,11 +61,11 @@ export default () => (
         </Col>
         <Col size={{ xs: 8, sm: 6, md: 4, lg: 3 }}>
           <Box>
-            <Link href="mailto:contact@vanilla.so">
+            <MailTo href="mailto:contact@vanilla.so">
               <Box icon iconBigger>
                 Want to help us?
               </Box>
-            </Link>
+            </MailTo>
           </Box>
         </Col>
       </Row>
