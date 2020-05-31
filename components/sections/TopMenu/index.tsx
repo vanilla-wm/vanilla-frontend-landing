@@ -28,7 +28,6 @@ const Wrapper = Element.config({ name: 'section/TopMenu/Wrapper' })
 
 const Inner = Element.config({ name: 'section/TopMenu/Inner' })
   .attrs({
-    id: 'home',
     block: true,
   })
   .theme((t) => ({
@@ -91,7 +90,7 @@ export default (props) => {
               {...props}
               beforeContent={beforeContent}
               afterContent={
-                showHamburger ? (
+                windowSize.innerWidth !== 0 && showHamburger ? (
                   <Icon name="menu" onClick={() => setOpenMenu(true)} />
                 ) : (
                   Menu

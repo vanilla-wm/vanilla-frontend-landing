@@ -7,13 +7,15 @@ import EasySetup from 'sections/EasySetup'
 import Plugins from 'sections/Plugins'
 import Footer from 'sections/Footer'
 
-export default () => (
-  <Root>
-    <TopMenu />
-    <Heading />
-    <HowItWorks />
-    <EasySetup />
-    <Plugins />
-    <Footer />
-  </Root>
-)
+export default () => {
+  return (
+    <Root>
+      <TopMenu />
+      <Heading />
+      <HowItWorks />
+      <EasySetup />
+      <Plugins />
+      <Footer />
+    </Root>
+  )
+}

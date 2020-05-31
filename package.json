@@ -6,7 +6,9 @@
   "scripts": {
     "start": "yarn next",
     "start:prod": "yarn next start",
-    "build": "yarn next build"
+    "build": "yarn next build",
+    "export": "yarn next export",
+    "prep": "yarn build && yarn export"
   },
   "dependencies": {
     "@rehooks/window-size": "^1.0.2",
