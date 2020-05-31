@@ -75,7 +75,7 @@ export default () => {
                 <Text light centered={centeredText}>
                   Add Payment Pointer to{' '}
                   <Link primary href="">
-                    Wallet
+                    Wallet Provider
                   </Link>{' '}
                   of your choice
                 </Text>
@@ -89,7 +89,7 @@ export default () => {
                 </Box>
                 <Heading level2 label="Code Snippet" />
                 <Text light centered={centeredText}>
-                  Place generate Code Snippet to head of your HTML
+                  Place generated Code Snippet to the head of your HTML
                 </Text>
               </ItemBox>
             </Col>
@@ -100,7 +100,7 @@ export default () => {
                 </Box>
                 <Heading level2 label="API" />
                 <Text light centered={centeredText}>
-                  Call our API whenever you want to verify payments
+                  Use our simple API when you need to verify payments
                 </Text>
               </ItemBox>
             </Col>

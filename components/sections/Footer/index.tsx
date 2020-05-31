@@ -72,7 +72,7 @@ export default () => {
         <Row>
           <Col size={{ xs: 12, lg: 9 }}>
             <Heading reset level1 left>
-              Project Vanilla is developed as a part of Grant for the Web
+              Project Vanilla is developed as part of the Grant for the Web
               hackathon by Cinnamon.
             </Heading>
           </Col>

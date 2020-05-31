@@ -34,10 +34,10 @@ export default () => {
         <Row>
           <Col>
             <InnerBox>
-              <Heading title>Web Monetization Content Protection</Heading>
+              <Heading title>Web Monetization Verification</Heading>
               <Heading tag="h2" subheading>
-                Verify payment stream before sending content
-                <br /> to the user via Vanilla API
+                Verify payment streams before sending content
+                <br /> to users via Vanilla API
               </Heading>
               <Button
                 google
@@ -46,16 +46,16 @@ export default () => {
               />
 
               <Text centered>
-                <Text bold>Don't get what we talk about?</Text>
+                <Text bold>Don't get what we're talking about?</Text>
                 <br />
                 <Text secondary>
-                  learn more about{' '}
+                  Learn more about{' '}
                   <Link
                     primary
                     href="https://webmonetization.org/"
                     target="_blank"
                   >
-                    Web monetization
+                    Web Monetization
                   </Link>
                 </Text>
               </Text>
