@@ -10,28 +10,8 @@ import Icon from 'base/Icon'
 import Logo from 'base/Logo'
 import Button from 'base/Button'
 import Badge from 'base/Badge'
-
-const afterContent = () => (
-  <LinkList>
-    <AnimationLink to="home" spy={true} smooth={true} duration={300}>
-      <Link active label="About" />
-    </AnimationLink>
-    <AnimationLink to="how-it-works" spy={true} smooth={true} duration={300}>
-      <Link label="How it works" />
-    </AnimationLink>
-    <AnimationLink to="easy-setup" spy={true} smooth={true} duration={300}>
-      <Link label="Easy Setup" />
-    </AnimationLink>
-    <AnimationLink to="plugins" spy={true} smooth={true} duration={300}>
-      <Link label="Plugins" />
-    </AnimationLink>
-    <Button
-      google
-      label="Sign in with Google"
-      beforeContent={<Icon name="google" />}
-    />
-  </LinkList>
-)
+import Menu from './Menu'
+import MobileMenu from './MobileMenu'
 
 const beforeContent = () => (
   <>
@@ -87,6 +67,7 @@ export default (props) => {
   }
 
   const [sticked, setSticked] = useState(false)
+  const [isOpenMenu, setOpenMenu] = useState(true)
 
   const showHamburger = windowSize.innerWidth < 992
 
@@ -105,16 +86,25 @@ export default (props) => {
   })
 
   return (
-    <Wrapper>
-      <Inner sticked={sticked}>
-        <Container data-test="container">
-          <Content
-            {...props}
-            beforeContent={beforeContent}
-            afterContent={showHamburger ? null : afterContent}
-          />
-        </Container>
-      </Inner>
-    </Wrapper>
+    <>
+      <Wrapper>
+        <Inner sticked={sticked}>
+          <Container data-test="container">
+            <Content
+              {...props}
+              beforeContent={beforeContent}
+              afterContent={
+                showHamburger ? (
+                  <Icon name="menu" onClick={() => setOpenMenu(true)} />
+                ) : (
+                  Menu
+                )
+              }
+            />
+          </Container>
+        </Inner>
+      </Wrapper>
+      {isOpenMenu && <MobileMenu onClose={() => setOpenMenu(false)} />}
+    </>
   )
 }

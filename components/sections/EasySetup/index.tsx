@@ -30,7 +30,7 @@ export default () => {
     windowSize = useWindowSize()
   }
 
-  const showLine = windowSize.innerWidth >= 768
+  const showLine = !!windowSize.innerWidth >= 768
 
   return (
     <Section id="easy-setup">
@@ -47,7 +47,7 @@ export default () => {
         >
           <Col>
             <ItemBox>
-              {showLine ? <Line /> : null}
+              {showLine && <Line />}
               <Box icon>
                 <Icon name="account" />
               </Box>
@@ -62,7 +62,7 @@ export default () => {
           </Col>
           <Col>
             <ItemBox>
-              {showLine ? <Line /> : null}
+              {showLine && <Line />}
               <Box icon>
                 <Icon name="payment-pointer" />
               </Box>
@@ -78,7 +78,7 @@ export default () => {
           </Col>
           <Col>
             <ItemBox>
-              {showLine ? <Line /> : null}
+              {showLine && <Line />}
               <Box icon>
                 <Icon name="code-snippet" />
               </Box>
