@@ -17,9 +17,9 @@ export default element
   }))
   .variants((t) => ({
     title: {
-      fontSize: { xs: 28, md: 36 },
+      fontSize: { xs: 28, md: 48 },
       fontWeight: t.fontWeight.bold,
-      marginBottom: 24,
+      marginBottom: 4,
       color: t.color.primary,
       textAlign: 'center',
     },

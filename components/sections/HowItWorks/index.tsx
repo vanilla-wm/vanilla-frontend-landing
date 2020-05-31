@@ -1,14 +1,12 @@
 import React, { useState, useEffect } from 'react'
-import dynamic from 'next/dynamic'
 import { Container, Row, Col } from '@vitus-labs/coolgrid'
 import Section from 'base/Section'
 import heading from 'base/Heading'
 import Category from './Category'
 import AnimBackground from './AnimBackground'
-
-const Step1 = dynamic(() => import('./animations/Step1'))
-const Step2 = dynamic(() => import('./animations/Step2'))
-const Step3 = dynamic(() => import('./animations/Step3'))
+import Step1 from './animations/Step1'
+import Step2 from './animations/Step2'
+import Step3 from './animations/Step3'
 
 const TIMEOUT = 8000
 

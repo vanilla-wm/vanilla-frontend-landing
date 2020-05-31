@@ -59,7 +59,7 @@ export default () => {
                 <Heading level2 label="Vanilla Account" />
                 <Text light centered={centeredText}>
                   Create Vanilla account by{' '}
-                  <Link primary href="">
+                  <Link primary href="https://api.vanilla.so/auth/google">
                     singing up with Google
                   </Link>
                 </Text>
@@ -74,7 +74,11 @@ export default () => {
                 <Heading level2 label="Payment Pointer" />
                 <Text light centered={centeredText}>
                   Add Payment Pointer to{' '}
-                  <Link primary href="">
+                  <Link
+                    primary
+                    href="https://webmonetization.org/#wallets"
+                    target="_blank"
+                  >
                     Wallet Provider
                   </Link>{' '}
                   of your choice

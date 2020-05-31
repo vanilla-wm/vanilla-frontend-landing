@@ -9,6 +9,7 @@ export default element
     cursor: 'pointer',
     fontWeight: 500,
     transition: '0.3s',
+    fontSize: 16,
     base: {
       color: 'white',
     },

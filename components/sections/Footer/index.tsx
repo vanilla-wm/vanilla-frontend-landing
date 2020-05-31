@@ -5,7 +5,7 @@ import styled from 'styled-components'
 import box from 'base/Box'
 import Heading from 'base/Heading'
 import Text from 'base/Text'
-import List from 'base/List'
+import list from 'base/List'
 import Link from 'base/Link'
 import logo from 'base/Logo'
 import shape from 'base/Shape'
@@ -38,7 +38,7 @@ const dataListC = [
   { label: 'Web Monetization', link: 'https://webmonetization.org/' },
   { label: 'Interledger', link: 'https://interledger.org/' },
   { label: 'GateHub', link: 'https://gatehub.net/' },
-  { label: 'Uphold', link: 'https://uphold.com/en-us/' },
+  { label: 'Uphold', link: 'https://uphold.com/' },
 ]
 
 const Box = box.theme((t) => ({
@@ -48,6 +48,14 @@ const Box = box.theme((t) => ({
   paddingBottom: { xs: 32 },
   overflow: 'hidden',
 }))
+
+const List = list.styles(
+  (css) => css`
+    & * {
+      font-weight: 500;
+    }
+  `
+)
 
 const FooterBox = box.theme({
   marginTop: 32,
