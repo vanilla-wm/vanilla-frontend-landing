@@ -2,15 +2,17 @@ import React, { useState, useEffect } from 'react'
 import { Container, Row, Col } from '@vitus-labs/coolgrid'
 import Section from 'base/Section'
 import Heading from 'base/Heading'
-import Box from './Box'
 import Category from './Category'
+import Step1 from './animations/Step1'
+import Step2 from './animations/Step2'
+import Step3 from './animations/Step3'
 
-const TIMEOUT = 3000
+const TIMEOUT = 6000
 
 const data = {
-  0: <Box>content A</Box>,
-  1: <Box>content B</Box>,
-  2: <Box>content C</Box>,
+  0: <Step1 />,
+  1: <Step2 />,
+  2: <Step3 />,
 }
 
 export default () => {

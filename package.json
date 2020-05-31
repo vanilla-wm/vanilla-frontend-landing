@@ -16,6 +16,7 @@
     "@vitus-labs/rocketstyle": "^0.7.6",
     "@vitus-labs/unistyle": "^0.7.3",
     "lodash": "^4.17.15",
+    "lottie-react-web": "^2.1.4",
     "next": "^9.3.3",
     "next-seo": "^4.5.0",
     "react": "^16.13.1",
