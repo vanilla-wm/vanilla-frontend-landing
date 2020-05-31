@@ -22,5 +22,6 @@ export default element
   .multiple({
     iconBigger: {
       width: '100%',
+      backgroundColor: 'rgba(254, 182, 17, 0.2)',
     },
   })

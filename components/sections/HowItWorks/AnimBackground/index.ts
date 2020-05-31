@@ -10,5 +10,5 @@ export default element
     width: '100%',
     height: '100%',
     backgroundColor: '#101010',
-    borderRadiusBottomLeft: { xs: 0, md: 200 },
+    borderRadiusBottomLeft: { xs: 0, sm: 80, lg: 200 },
   })

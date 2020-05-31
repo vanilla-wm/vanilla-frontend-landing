@@ -24,7 +24,7 @@ export default element
       textAlign: 'center',
     },
     level1: {
-      fontSize: { xs: 24, lg: 32 },
+      fontSize: { xs: 24, lg: 30 },
       fontWeight: t.fontWeight.bold,
       marginBottom: { xs: 24, md: 48 },
       backgroundColor: t.color.primary,

@@ -61,8 +61,9 @@ export default () => {
 
   const showShape = windowSize.innerWidth >= 768
   const showEmptyHeading = windowSize.innerWidth >= 576
-  const showBRInFooter =
-    windowSize.innerWidth >= 400 && windowSize.innerWidth <= 800
+  const showBRInFooter = windowSize.innerWidth <= 800
+
+  const showBRInFooterXS = windowSize.innerWidth <= 400
 
   return (
     <Box>
@@ -100,9 +101,11 @@ export default () => {
         </Row>
         <FooterBox contentDirection="inline">
           <Text inline dark sm>
-            Created with love over the weekend in Prague,
-            {showBRInFooter && <br />}
-            Czech republic by <Logo name="cinnamon" />
+            Created with love over the weekend
+            {showBRInFooter ? <br /> : ' '}
+            in Prague, Czech republic
+            {showBRInFooterXS ? <br /> : ' '}
+            by <Logo name="cinnamon" />
           </Text>
           &nbsp;
         </FooterBox>
