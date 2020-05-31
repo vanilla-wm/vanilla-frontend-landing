@@ -2,7 +2,7 @@ import { element } from 'base/base'
 
 export default element
   .config({ name: 'Button' })
-  .attrs({ gap: 16 })
+  .attrs(({ href }) => ({ tag: href ? 'a' : 'button', gap: 16 }))
   .theme((t) => ({
     paddingX: 8,
     transition: '0.3s',

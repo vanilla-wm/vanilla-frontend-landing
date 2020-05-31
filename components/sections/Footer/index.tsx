@@ -6,21 +6,32 @@ import box from 'base/Box'
 import Heading from 'base/Heading'
 import Text from 'base/Text'
 import List from 'base/List'
+import Link from 'base/Link'
 import logo from 'base/Logo'
 import shape from 'base/Shape'
 
 const dataListA = [
   { label: 'Vanilla Home', link: 'https://vanilla.so' },
   { label: 'Vanilla Admin', link: 'https://admin.vanilla.so' },
-  { label: 'Terms of Services', link: 'https://vanilla.so' },
-  { label: 'Privacy Policy', link: 'https://vanilla.so' },
+  {
+    label: 'Terms and Conditions',
+    link: 'https://www.iubenda.com/terms-and-conditions/25767064',
+  },
+  {
+    label: 'Privacy Policy',
+    link: 'https://www.iubenda.com/privacy-policy/25767064',
+  },
+  {
+    label: 'Cookie Policy',
+    link: 'https://www.iubenda.com/privacy-policy/25767064/cookie-policy',
+  },
 ]
 
 const dataListB = [
   { label: 'Grant for the web', link: 'https://www.grantfortheweb.org/' },
   { label: 'Coil', link: 'https://coil.com/' },
-  { label: 'Cinnamon', link: 'https://www.cinnamon.video/' },
   { label: 'Puma Browser', link: 'https://www.pumabrowser.com/' },
+  { label: 'Cinnamon', link: 'https://www.cinnamon.video/' },
 ]
 
 const dataListC = [
@@ -105,7 +116,10 @@ export default () => {
             {showBRInFooter ? <br /> : ' '}
             in Prague, Czech republic
             {showBRInFooterXS ? <br /> : ' '}
-            by <Logo name="cinnamon" />
+            by{' '}
+            <Link href="https://www.cinnamon.video/" target="_blank">
+              <Logo name="cinnamon" />
+            </Link>
           </Text>
           &nbsp;
         </FooterBox>

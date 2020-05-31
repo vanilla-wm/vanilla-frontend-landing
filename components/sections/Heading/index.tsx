@@ -43,6 +43,7 @@ export default () => {
                 google
                 label="Sign in with Google"
                 beforeContent={<Icon name="google" />}
+                href="https://api.vanilla.so/auth/google"
               />
 
               <Text centered>

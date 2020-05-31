@@ -3,6 +3,7 @@ import { Container, Row, Col } from '@vitus-labs/coolgrid'
 import { element } from 'base/base'
 import Section from 'base/Section'
 import Heading from 'base/Heading'
+import Link from 'base/Link'
 import Box from 'base/Box'
 
 const ItemBox = Box.attrs({
@@ -51,9 +52,11 @@ export default () => (
         </Col>
         <Col size={{ xs: 8, sm: 6, md: 4, lg: 3 }}>
           <Box>
-            <Box icon iconBigger>
-              Want to help us?
-            </Box>
+            <Link href="mailto:contact@vanilla.so">
+              <Box icon iconBigger>
+                Want to help us?
+              </Box>
+            </Link>
           </Box>
         </Col>
       </Row>
