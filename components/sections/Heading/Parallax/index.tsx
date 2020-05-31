@@ -45,7 +45,7 @@ const Square = styled(Shape).attrs({
 export default () => {
   const [scroll, setScroll] = useState(0)
 
-  const handleScroll = (e) => {
+  const handleScroll = () => {
     setScroll(window.scrollY)
   }
 

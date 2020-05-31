@@ -2,7 +2,11 @@ import React, { Fragment } from 'react'
 import Document, { Head, Main, NextScript } from 'next/document'
 import { ServerStyleSheet } from 'styled-components'
 
-export default class MyDocument extends Document {
+interface Props {
+  styleTags: any
+}
+
+export default class MyDocument extends Document<Props> {
   static async getInitialProps(ctx) {
     const sheet = new ServerStyleSheet()
     const originalRenderPage = ctx.renderPage

@@ -65,7 +65,7 @@ const Shape = styled(shape).attrs({
 `
 
 export default () => {
-  let windowSize = {}
+  let windowSize = { innerWidth: 0 }
   if (process.browser) {
     windowSize = useWindowSize()
   }

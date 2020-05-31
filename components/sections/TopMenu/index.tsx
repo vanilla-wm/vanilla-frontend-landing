@@ -1,14 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import useWindowSize from '@rehooks/window-size'
-import { Link as AnimationLink } from 'react-scroll'
 import { throttle } from 'lodash'
 import { Container } from '@vitus-labs/coolgrid'
 import { element as Element } from 'base/base'
-import LinkList from 'base/LinkList'
-import Link from 'base/Link'
 import Icon from 'base/Icon'
 import Logo from 'base/Logo'
-import Button from 'base/Button'
 import Badge from 'base/Badge'
 import Menu from './Menu'
 import MobileMenu from './MobileMenu'
@@ -62,7 +58,7 @@ const Content = Element.attrs({
 })
 
 export default (props) => {
-  let windowSize = {}
+  let windowSize = { innerWidth: 0 }
   if (process.browser) {
     windowSize = useWindowSize()
   }
@@ -72,7 +68,7 @@ export default (props) => {
 
   const showHamburger = windowSize.innerWidth < 992
 
-  const handleScroll = (e) => {
+  const handleScroll = () => {
     window.scrollY === 0 ? setSticked(false) : setSticked(true)
   }
 

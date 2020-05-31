@@ -36,7 +36,7 @@ export default () => {
 
   const [active, setActive] = useState(0)
   const [seconds, setSeconds] = useState(0)
-  const [isCounterActive, setCounterActive] = useState(true)
+  const [isCounterActive] = useState(true)
 
   const reset = () => {
     setSeconds(0)

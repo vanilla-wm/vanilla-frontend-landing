@@ -20,7 +20,7 @@ const Button = button.theme({
 const LineWrapper = Box.theme({ height: 120 })
 
 export default () => {
-  let windowSize = {}
+  let windowSize = { innerWidth: 0 }
   if (process.browser) {
     windowSize = useWindowSize()
   }
