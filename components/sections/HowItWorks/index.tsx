@@ -20,7 +20,7 @@ const Heading = heading.styles(
   (css) => css`
     align-self: center;
     @media screen and (min-width: 768px) {
-      align-self: center;
+      align-self: flex-start;
     }
   `
 )

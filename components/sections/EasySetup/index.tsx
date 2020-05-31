@@ -47,7 +47,8 @@ export default () => {
             contentAlignX="center"
             gap={64}
             size={{ xs: 8, sm: 6, lg: 3 }}
-            gutter={0}
+            gutter={{ xs: 16, md: 0 }}
+            // gap={{ xs: 16, sm: 32 }}
           >
             <Col>
               <ItemBox>

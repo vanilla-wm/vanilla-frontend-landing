@@ -22,7 +22,8 @@ export default () => (
         contentAlignX={{ xs: 'center', lg: 'left' }}
         contentAlignY="top"
         size={{ xs: 8, sm: 4, md: 3, lg: 2 }}
-        gap={{ xs: 16, sm: 32 }}
+        gap={{ xs: 16, sm: 40 }}
+        gutter={{ xs: 24, md: 0 }}
       >
         <Col>
           <ItemBox>
