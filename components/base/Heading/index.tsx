@@ -8,6 +8,7 @@ export default element
     marginTop: t.spacing.reset,
     marginBottom: t.spacing.reset,
     fontFamily: t.fontFamily.mono,
+    transition: '0.3s',
   }))
   .states((t) => ({
     primary: {

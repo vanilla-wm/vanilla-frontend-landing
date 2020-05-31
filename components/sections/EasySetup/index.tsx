@@ -67,7 +67,13 @@ export default () => {
                 <Icon name="payment-pointer" />
               </Box>
               <Heading level2 label="Payment Pointer" />
-              <Text light>Add Payment Pointer to Wallet of your choice</Text>
+              <Text light>
+                Add Payment Pointer to{' '}
+                <Link primary href="">
+                  Wallet
+                </Link>{' '}
+                of your choice
+              </Text>
             </ItemBox>
           </Col>
           <Col>

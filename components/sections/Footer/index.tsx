@@ -6,7 +6,7 @@ import box from 'base/Box'
 import Heading from 'base/Heading'
 import Text from 'base/Text'
 import List from 'base/List'
-import Logo from 'base/Logo'
+import logo from 'base/Logo'
 import shape from 'base/Shape'
 
 const dataListA = [
@@ -33,13 +33,17 @@ const dataListC = [
 const Box = box.theme((t) => ({
   backgroundColor: t.color.primary,
   color: t.color.black,
-  paddingY: { xs: 64, md: 100 },
+  paddingTop: { xs: 64, md: 100 },
+  paddingBottom: { xs: 32 },
   overflow: 'hidden',
 }))
 
 const FooterBox = box.theme({
   marginTop: 32,
+  display: 'block',
 })
+
+const Logo = logo.theme({ height: 20, top: 5 })
 
 const Shape = styled(shape).attrs({
   name: 'vanilla',
@@ -57,6 +61,8 @@ export default () => {
 
   const showShape = windowSize.innerWidth >= 768
   const showEmptyHeading = windowSize.innerWidth >= 576
+  const showBRInFooter =
+    windowSize.innerWidth >= 400 && windowSize.innerWidth <= 800
 
   return (
     <Box>
@@ -93,11 +99,12 @@ export default () => {
           </Col>
         </Row>
         <FooterBox contentDirection="inline">
-          <Text dark sm>
-            Created with love over the weekend in Prague, Czech republic by{' '}
+          <Text inline dark sm>
+            Created with love over the weekend in Prague,
+            {showBRInFooter && <br />}
+            Czech republic by <Logo name="cinnamon" />
           </Text>
           &nbsp;
-          <Logo name="cinnamon" />
         </FooterBox>
       </Container>
     </Box>

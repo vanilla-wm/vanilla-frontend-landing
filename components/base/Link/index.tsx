@@ -8,6 +8,7 @@ export default element
   .theme((t) => ({
     cursor: 'pointer',
     fontWeight: 500,
+    transition: '0.3s',
     base: {
       color: 'white',
     },
