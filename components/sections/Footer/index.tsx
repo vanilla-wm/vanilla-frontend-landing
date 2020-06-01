@@ -102,11 +102,16 @@ export default () => {
               <FooterLink
                 href="https://dev.to/devteam/announcing-the-grant-for-the-web-hackathon-on-dev-3kd1"
                 target="_blank"
+                rel="noreferrer"
               >
                 Grant for the Web hackathon
               </FooterLink>{' '}
               by{' '}
-              <FooterLink href="https://www.cinnamon.video/" target="_blank">
+              <FooterLink
+                href="https://www.cinnamon.video/"
+                target="_blank"
+                rel="noreferrer"
+              >
                 Cinnamon
               </FooterLink>
               .
@@ -142,7 +147,11 @@ export default () => {
             in Prague, Czech republic
             {showBRInFooterXS ? <br /> : ' '}
             by{' '}
-            <Link href="https://www.cinnamon.video/" target="_blank">
+            <Link
+              href="https://www.cinnamon.video/"
+              target="_blank"
+              rel="noreferrer"
+            >
               <Logo name="cinnamon" />
             </Link>
           </Text>

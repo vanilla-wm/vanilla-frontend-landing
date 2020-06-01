@@ -59,6 +59,7 @@ export default () => {
                     primary
                     href="https://webmonetization.org/"
                     target="_blank"
+                    rel="noreferrer"
                   >
                     Web Monetization
                   </Link>
