@@ -64,11 +64,11 @@ export default class MyDocument extends Document<Props> {
           />
           <meta
             property="og:image"
-            content={require('assets/seo/open-graph.jpg')}
+            content={require('assets/seo/open-graph.jpg?url')}
           />
           <meta
             property="twitter:card"
-            content={require('assets/seo/twitter.jpg')}
+            content={require('assets/seo/twitter.jpg?url')}
           />
           <meta property="twitter:url" content="https://vanilla.so/" />
           <meta
@@ -81,7 +81,7 @@ export default class MyDocument extends Document<Props> {
           />
           <meta
             property="twitter:image"
-            content={require('assets/seo/twitter-og.jpg')}
+            content={require('assets/seo/twitter-og.jpg?url')}
           />
           <meta name="google" content="nositelinkssearchbox" />
           <meta name="format-detection" content="telephone=no" />
@@ -111,47 +111,47 @@ export default class MyDocument extends Document<Props> {
           <link
             rel="apple-touch-icon"
             sizes="57x57"
-            href={require('assets/favicon/apple-icon-57x57.png')}
+            href={require('assets/favicon/apple-icon-57x57.png?url')}
           />
           <link
             rel="apple-touch-icon"
             sizes="60x60"
-            href={require('assets/favicon/apple-icon-60x60.png')}
+            href={require('assets/favicon/apple-icon-60x60.png?url')}
           />
           <link
             rel="apple-touch-icon"
             sizes="72x72"
-            href={require('assets/favicon/apple-icon-72x72.png')}
+            href={require('assets/favicon/apple-icon-72x72.png?url')}
           />
           <link
             rel="apple-touch-icon"
             sizes="76x76"
-            href={require('assets/favicon/apple-icon-76x76.png')}
+            href={require('assets/favicon/apple-icon-76x76.png?url')}
           />
           <link
             rel="apple-touch-icon"
             sizes="114x114"
-            href={require('assets/favicon/apple-icon-114x114.png')}
+            href={require('assets/favicon/apple-icon-114x114.png?url')}
           />
           <link
             rel="apple-touch-icon"
             sizes="120x120"
-            href={require('assets/favicon/apple-icon-120x120.png')}
+            href={require('assets/favicon/apple-icon-120x120.png?url')}
           />
           <link
             rel="apple-touch-icon"
             sizes="144x144"
-            href={require('assets/favicon/apple-icon-144x144.png')}
+            href={require('assets/favicon/apple-icon-144x144.png?url')}
           />
           <link
             rel="apple-touch-icon"
             sizes="152x152"
-            href={require('assets/favicon/apple-icon-152x152.png')}
+            href={require('assets/favicon/apple-icon-152x152.png?url')}
           />
           <link
             rel="apple-touch-icon"
             sizes="180x180"
-            href={require('assets/favicon/apple-icon-180x180.png')}
+            href={require('assets/favicon/apple-icon-180x180.png?url')}
           />
           {/* <link
             rel="icon"
@@ -163,19 +163,19 @@ export default class MyDocument extends Document<Props> {
             rel="icon"
             type="image/png"
             sizes="32x32"
-            href={require('assets/favicon/favicon-32x32.png')}
+            href={require('assets/favicon/favicon-32x32.png?url')}
           />
           <link
             rel="icon"
             type="image/png"
             sizes="96x96"
-            href={require('assets/favicon/favicon-96x96.png')}
+            href={require('assets/favicon/favicon-96x96.png?url')}
           />
           <link
             rel="icon"
             type="image/png"
             sizes="16x16"
-            href={require('assets/favicon/favicon-16x16.png')}
+            href={require('assets/favicon/favicon-16x16.png?url')}
           />
         </Head>
         <Main />
