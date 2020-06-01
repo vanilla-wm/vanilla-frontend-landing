@@ -9,18 +9,24 @@ export default () => {
     }
   }
   const signIn = () => {
-    window.open(
-      'https://api.vanilla.so/auth/google',
-      'popup',
-      'width=600,height=600'
-    )
-    clearInterval(interval.current)
-    interval.current = setInterval(() => {
+    const redirect = ()=>{
       if (getCookie()) {
         clearInterval(interval.current)
         window.location.replace('https://admin.vanilla.so')
       }
-    }, 1000)
+    }
+
+    if (!getCookie()) {
+      window.open(
+        'https://api.vanilla.so/auth/google',
+        'popup',
+        'width=600,height=600'
+      )
+      clearInterval(interval.current)
+      interval.current = setInterval(redirect, 1000)
+    }else{
+      redirect()
+    }
   }
 
   return { signIn }
