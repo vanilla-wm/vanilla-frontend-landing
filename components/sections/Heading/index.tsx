@@ -39,9 +39,9 @@ export default () => {
             <InnerBox>
               <Heading title>Web Monetization Verifier</Heading>
               <Heading tag="h2" subheading>
-                Verify payment streams before showing exclusive content
+                Verify payment streams before sharing exclusive content
                 <br />
-                to users via Vanilla API
+                with users with Vanilla API
               </Heading>
               <Button
                 google
@@ -51,7 +51,7 @@ export default () => {
               />
 
               <Text centered>
-                <Text bold>Don't get what we're talking about?</Text>
+                <Text bold>Want to find out more?</Text>
                 <br />
                 <Text secondary>
                   Learn more about{' '}

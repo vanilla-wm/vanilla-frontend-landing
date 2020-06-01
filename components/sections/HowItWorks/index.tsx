@@ -74,21 +74,21 @@ export default () => {
             <Category
               index={1}
               title="Content Request"
-              text="When users visit your site, they request content and initialize Web Monetization"
+              text="Users request content on monetized websites and Web Monetization is initialized"
               onClick={() => boxEvent(0)}
               active={active === 0}
             />
             <Category
               index={2}
               title="Payment Verification"
-              text="Use Vanilla API to verify payment streams from users before enabling exclusive content"
+              text="Vanilla API is activated to verify payment streams from users before sharing exclusive content"
               onClick={() => boxEvent(1)}
               active={active === 1}
             />
             <Category
               index={3}
               title="Content Delivery"
-              text="The users get requested content and you are paid 🎉"
+              text="Users get the requested content and monetized websites receive payments 🎉"
               onClick={() => boxEvent(2)}
               active={active === 2}
             />
