@@ -63,7 +63,7 @@ export default () => {
                 <Text light centered={centeredText}>
                   Create Vanilla account by{' '}
                   <Link primary onClick={signIn}>
-                    singing up with Google
+                    signing up with Google
                   </Link>
                 </Text>
               </ItemBox>
