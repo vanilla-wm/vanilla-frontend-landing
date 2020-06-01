@@ -17,9 +17,9 @@ const ItemWrapper = element.theme((t) => ({
   color: t.color.black,
 }))
 
-const Item = ({ label, link, local }) => (
+const Item = ({ label, link }) => (
   <ItemWrapper>
-    <Link href={link} target={!local ? '_blank' : undefined}>
+    <Link href={link} target="_blank" rel="noopener noreferrer">
       → {label}
     </Link>
   </ItemWrapper>
