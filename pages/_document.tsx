@@ -6,30 +6,6 @@ interface Props {
   styleTags: any
 }
 
-const config = () => {
-  var _iub = _iub || []
-  _iub.csConfiguration = {
-    consentOnContinuedBrowsing: false,
-    whitelabel: false,
-    lang: 'en',
-    siteId: 1913070,
-    cookiePolicyId: 25767064,
-    banner: {
-      acceptButtonDisplay: true,
-      customizeButtonDisplay: true,
-      acceptButtonColor: '#feb611',
-      acceptButtonCaptionColor: '#010101',
-      customizeButtonColor: '#332403',
-      customizeButtonCaptionColor: '#feb611',
-      rejectButtonColor: '#feb611',
-      rejectButtonCaptionColor: 'white',
-      position: 'float-bottom-left',
-      textColor: '#ffffff',
-      backgroundColor: '#000001',
-    },
-  }
-}
-
 export default class MyDocument extends Document<Props> {
   static async getInitialProps(ctx) {
     const sheet = new ServerStyleSheet()
