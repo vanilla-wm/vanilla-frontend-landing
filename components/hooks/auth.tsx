@@ -17,6 +17,7 @@ export default () => {
     clearInterval(interval.current)
     interval.current = setInterval(() => {
       if (getCookie()) {
+        clearInterval(interval.current)
         window.open('https://admin.vanilla.so')
       }
     }, 1000)

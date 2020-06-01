@@ -18,7 +18,6 @@ export default element
     },
     active: {
       color: t.color.primary,
-      borderBottom: `1px solid ${t.color.primary}`,
     },
   }))
   .states((t) => ({

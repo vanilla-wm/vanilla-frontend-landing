@@ -29,6 +29,7 @@ export default () => {
   }
 
   const showParallax = windowSize.innerWidth >= 768
+  const showBr = windowSize.innerWidth >= 768
 
   const { signIn } = auth()
 
@@ -41,8 +42,8 @@ export default () => {
             <InnerBox>
               <Heading title>Web Monetization Verifier</Heading>
               <Heading tag="h2" subheading>
-                Verify payment streams before sharing exclusive content
-                <br />
+                Verify payment streams before sharing exclusive content{' '}
+                {showBr && <br />}
                 with users with Vanilla API
               </Heading>
               <Button
