@@ -4,16 +4,16 @@ import Section from 'base/Section'
 import heading from 'base/Heading'
 import Category from './Category'
 import AnimBackground from './AnimBackground'
-import Step1 from './animations/Step1'
-import Step2 from './animations/Step2'
-import Step3 from './animations/Step3'
-
+import step1 from './animations/step1/animation.json'
+import step2 from './animations/step2/animation.json'
+import step3 from './animations/step3/animation.json'
+import Lottie from 'lottie-react-web'
 const TIMEOUT = 8000
 
 const data = {
-  0: <Step1 />,
-  1: <Step2 />,
-  2: <Step3 />,
+  0: step1,
+  1: step2 ,
+  2: step3,
 }
 
 const Heading = heading.styles(
@@ -95,7 +95,12 @@ export default () => {
           </Col>
           <Col size={{ xs: 12, lg: 8 }}>
             <AnimBackground />
-            {data[active]}
+            <Lottie
+              options={{
+              loop: active === 2,
+              animationData: data[active],
+              }}
+            />
           </Col>
         </Row>
       </Container>
