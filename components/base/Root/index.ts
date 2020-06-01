@@ -11,4 +11,5 @@ export default element
     backgroundColor: 'black',
     width: '100vw',
     overflowX: 'hidden',
+    minHeight: '100vh',
   })

@@ -1,4 +1,5 @@
 import React from 'react'
+import dynamic from 'next/dynamic'
 import useWindowSize from '@rehooks/window-size'
 import { Container, Row, Col } from '@vitus-labs/coolgrid'
 import auth from 'hooks/auth'
@@ -11,8 +12,9 @@ import Text from 'base/Text'
 import Link from 'base/Link'
 import Wrapper from './Wrapper'
 import InnerBox from './InnerBox'
-import Parallax from './Parallax'
 import Mouse from './Mouse'
+
+const Parallax = dynamic(() => import('./Parallax'))
 
 const Button = button.theme({
   marginY: 32,

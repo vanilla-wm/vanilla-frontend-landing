@@ -4,8 +4,8 @@ import useWindowSize from '@rehooks/window-size'
 import Root from 'base/Root'
 import TopMenu from 'sections/TopMenu'
 import Heading from 'sections/Heading'
-import HowItWorks from 'sections/HowItWorks'
 
+const HowItWorks = dynamic(() => import('sections/HowItWorks'))
 const EasySetup = dynamic(() => import('sections/EasySetup'))
 const Plugins = dynamic(() => import('sections/Plugins'))
 const Footer = dynamic(() => import('sections/Footer'))
