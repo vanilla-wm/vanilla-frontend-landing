@@ -3,6 +3,7 @@ import { Container, Row, Col } from '@vitus-labs/coolgrid'
 import { element } from 'base/base'
 import Section from 'base/Section'
 import Heading from 'base/Heading'
+import Icon from 'base/Icon'
 import link from 'base/Link'
 import Box from 'base/Box'
 
@@ -37,33 +38,49 @@ export default () => (
       >
         <Col>
           <ItemBox>
-            <Box icon>Coming soon</Box>
+            <Box icon>
+              <span>Coming soon</span>
+              <Icon name="wordpress" absolute />
+            </Box>
             <Heading level2 centered label="Wordpress" />
           </ItemBox>
         </Col>
         <Col>
           <ItemBox>
-            <Box icon>Coming soon</Box>
+            <Box icon>
+              <span>Coming soon</span>
+              <Icon name="express" absolute />
+            </Box>
             <Heading level2 centered label="Express.js" />
           </ItemBox>
         </Col>
         <Col>
           <ItemBox>
-            <Box icon>Coming soon</Box>
+            <Box icon>
+              <span>Coming soon</span>
+              <Icon name="apache" absolute />
+            </Box>
             <Heading level2 centered label="Apache" />
           </ItemBox>
         </Col>
         <Col>
           <ItemBox>
-            <Box icon>Coming soon</Box>
+            <Box icon>
+              <span>Coming soon</span>
+              <Icon name="nginx" absolute />
+            </Box>
             <Heading level2 centered label="Nginx" />
           </ItemBox>
         </Col>
         <Col size={{ xs: 8, sm: 6, md: 4, lg: 3 }}>
           <Box>
-            <MailTo href="mailto:contact@vanilla.so">
+            <MailTo
+              href="mailto:contact@vanilla.so"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Box icon iconBigger>
-                Want to help us?
+                <span>Want to help us?</span>
               </Box>
             </MailTo>
           </Box>

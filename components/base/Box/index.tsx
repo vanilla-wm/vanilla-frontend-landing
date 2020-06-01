@@ -7,7 +7,7 @@ export default element
     contentDirection: 'rows',
     contentAlignX: icon ? 'center' : undefined,
   }))
-  .variants((t) => ({
+  .variants((t, css) => ({
     icon: {
       height: 140,
       width: 140,
@@ -17,6 +17,11 @@ export default element
       marginBottom: 16,
       color: t.color.primary,
       fontWeight: 'bold',
+      extendCss: css`
+        & > span {
+          z-index: 1;
+        }
+      `,
     },
   }))
   .multiple((t) => ({

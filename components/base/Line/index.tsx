@@ -15,10 +15,7 @@ export default element
   })
   .styles(
     (css) => css`
-      background: linear-gradient(
-        90deg,
-        #3a3a3c 50.84%,
-        rgba(58, 58, 60, 0) 96.32%
-      );
+      background: linear-gradient(90deg, #202020 50%, rgba(32, 32, 32, 0) 100%);
+      opacity: 0.7;
     `
   )

@@ -102,7 +102,7 @@ export default () => {
               <FooterLink
                 href="https://dev.to/devteam/announcing-the-grant-for-the-web-hackathon-on-dev-3kd1"
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
               >
                 Grant for the Web hackathon
               </FooterLink>{' '}
@@ -110,7 +110,7 @@ export default () => {
               <FooterLink
                 href="https://www.cinnamon.video/"
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
               >
                 Cinnamon
               </FooterLink>

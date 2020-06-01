@@ -88,7 +88,7 @@ export default class MyDocument extends Document<Props> {
           <meta name="google" content="notranslate" />
           <meta
             name="viewport"
-            content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no, viewport-fit=cover"
+            content="width=device-width, initial-scale=1, maximum-scale=2, shrink-to-fit=no, viewport-fit=cover"
           />
           <meta name="monetization" content="$ilp.uphold.com/2Na6ff4BNePb" />
           <meta httpEquiv="X-UA-Compatible" content="IE=edge" />

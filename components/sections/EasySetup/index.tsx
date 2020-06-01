@@ -81,7 +81,7 @@ export default () => {
                     primary
                     href="https://webmonetization.org/#wallets"
                     target="_blank"
-                    rel="noreferrer"
+                    rel="noopener noreferrer"
                   >
                     Wallet Provider
                   </Link>{' '}

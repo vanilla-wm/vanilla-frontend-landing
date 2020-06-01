@@ -8,10 +8,25 @@ const icons = {
   account: require('assets/account.svg'),
   menu: require('assets/menu.svg'),
   close: require('assets/close.svg'),
+  express: require('assets/express.svg'),
+  apache: require('assets/apache.svg'),
+  nginx: require('assets/nginx.svg'),
+  wordpress: require('assets/wordpress.svg'),
+  person: require('assets/person.svg'),
 }
 
-export default element.config({ name: 'Icon' }).attrs(({ name }) => ({
-  tag: 'img',
-  src: icons[name],
-  alt: '',
-}))
+export default element
+  .config({ name: 'Icon' })
+  .attrs(({ name }) => ({
+    tag: 'img',
+    src: icons[name],
+    alt: '',
+  }))
+  .variants({
+    absolute: {
+      position: 'absolute',
+      top: '50%',
+      left: '50%',
+      transform: 'translateX(-50%) translateY(-50%)',
+    },
+  })

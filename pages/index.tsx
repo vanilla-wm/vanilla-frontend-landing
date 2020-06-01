@@ -1,12 +1,14 @@
 import React, { useEffect } from 'react'
+import dynamic from 'next/dynamic'
 import useWindowSize from '@rehooks/window-size'
 import Root from 'base/Root'
 import TopMenu from 'sections/TopMenu'
 import Heading from 'sections/Heading'
 import HowItWorks from 'sections/HowItWorks'
-import EasySetup from 'sections/EasySetup'
-import Plugins from 'sections/Plugins'
-import Footer from 'sections/Footer'
+
+const EasySetup = dynamic(() => import('sections/EasySetup'))
+const Plugins = dynamic(() => import('sections/Plugins'))
+const Footer = dynamic(() => import('sections/Footer'))
 
 export default () => {
   let windowSize = { innerWidth: 0 }
