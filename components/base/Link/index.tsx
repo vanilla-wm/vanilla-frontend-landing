@@ -35,6 +35,11 @@ export default element
       },
     },
   }))
-  .multiple({
+  .multiple((_, css) => ({
     active: true,
-  })
+    plain: {
+      extendCss: css`
+        border: none !important;
+      `,
+    },
+  }))

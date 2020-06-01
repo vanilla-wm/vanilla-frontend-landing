@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react'
 import useWindowSize from '@rehooks/window-size'
+import { Link as AnimationLink } from 'react-scroll'
 import { throttle } from 'lodash'
 import { Container } from '@vitus-labs/coolgrid'
 import { element as Element } from 'base/base'
 import Icon from 'base/Icon'
+import Link from 'base/Link'
 import Logo from 'base/Logo'
 import Badge from 'base/Badge'
 import Menu from './Menu'
@@ -11,8 +13,28 @@ import MobileMenu from './MobileMenu'
 
 const beforeContent = () => (
   <>
-    <Logo name="vanilla" />
-    <Badge>Experimental</Badge>
+    <AnimationLink
+      to="home"
+      spy={true}
+      smooth={true}
+      duration={300}
+      offset={-60}
+    >
+      <Link plain>
+        <Logo name="vanilla" />
+      </Link>
+    </AnimationLink>
+    <AnimationLink
+      to="home"
+      spy={true}
+      smooth={true}
+      duration={300}
+      offset={-60}
+    >
+      <Link plain>
+        <Badge>Experimental</Badge>
+      </Link>
+    </AnimationLink>
   </>
 )
 

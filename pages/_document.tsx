@@ -6,6 +6,30 @@ interface Props {
   styleTags: any
 }
 
+const config = () => {
+  var _iub = _iub || []
+  _iub.csConfiguration = {
+    consentOnContinuedBrowsing: false,
+    whitelabel: false,
+    lang: 'en',
+    siteId: 1913070,
+    cookiePolicyId: 25767064,
+    banner: {
+      acceptButtonDisplay: true,
+      customizeButtonDisplay: true,
+      acceptButtonColor: '#feb611',
+      acceptButtonCaptionColor: '#010101',
+      customizeButtonColor: '#332403',
+      customizeButtonCaptionColor: '#feb611',
+      rejectButtonColor: '#feb611',
+      rejectButtonCaptionColor: 'white',
+      position: 'float-bottom-left',
+      textColor: '#ffffff',
+      backgroundColor: '#000001',
+    },
+  }
+}
+
 export default class MyDocument extends Document<Props> {
   static async getInitialProps(ctx) {
     const sheet = new ServerStyleSheet()
@@ -52,7 +76,6 @@ export default class MyDocument extends Document<Props> {
           <meta name="robots" content="index, follow" />
           <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
           <meta name="language" content="English" />
-
           <meta property="og:type" content="website" />
           <meta property="og:url" content="https://vanilla.so/" />
           <meta
@@ -67,7 +90,6 @@ export default class MyDocument extends Document<Props> {
             property="og:image"
             content={require('assets/seo/open-graph.jpg')}
           />
-
           <meta
             property="twitter:card"
             content={require('assets/seo/twitter.jpg')}
@@ -85,7 +107,6 @@ export default class MyDocument extends Document<Props> {
             property="twitter:image"
             content={require('assets/seo/twitter-og.jpg')}
           />
-
           <meta name="google" content="nositelinkssearchbox" />
           <meta name="format-detection" content="telephone=no" />
           <meta name="google" content="notranslate" />
@@ -102,7 +123,6 @@ export default class MyDocument extends Document<Props> {
             href="https://fonts.gstatic.com/"
             crossOrigin="anonymous"
           ></link>
-
           <link
             href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;700&display=swap"
             rel="stylesheet"
@@ -111,7 +131,6 @@ export default class MyDocument extends Document<Props> {
             href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&family=Work+Sans:wght@400;500;700&display=swap"
             rel="stylesheet"
           />
-
           {this.props.styleTags}
           <link
             rel="apple-touch-icon"
