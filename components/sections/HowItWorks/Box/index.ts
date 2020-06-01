@@ -5,8 +5,8 @@ export default element
   .attrs({
     contentDirection: 'rows',
   })
-  .multiple((t) => ({
+  .multiple({
     innerSpaceLg: {
       paddingY: 32,
     },
-  }))
+  })

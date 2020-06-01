@@ -1,6 +1,7 @@
 import React from 'react'
 import useWindowSize from '@rehooks/window-size'
 import { Container, Row, Col } from '@vitus-labs/coolgrid'
+import auth from 'hooks/auth'
 import Box from 'base/Box'
 import Heading from 'base/Heading'
 import button from 'base/Button'
@@ -20,12 +21,14 @@ const Button = button.theme({
 const LineWrapper = Box.theme({ height: 120 })
 
 export default () => {
-  let windowSize = {}
+  let windowSize = { innerWidth: 0 }
   if (process.browser) {
     windowSize = useWindowSize()
   }
 
   const showParallax = windowSize.innerWidth >= 768
+
+  const { signIn } = auth()
 
   return (
     <Wrapper>
@@ -34,28 +37,30 @@ export default () => {
         <Row>
           <Col>
             <InnerBox>
-              <Heading title>Web Monetization Content Protection</Heading>
+              <Heading title>Web Monetization Verifier</Heading>
               <Heading tag="h2" subheading>
-                Verify payment stream before sending content
-                <br /> to the user via Vanilla API
+                Verify payment streams before showing exclusive content
+                <br />
+                to users via Vanilla API
               </Heading>
               <Button
                 google
                 label="Sign in with Google"
                 beforeContent={<Icon name="google" />}
+                onClick={signIn}
               />
 
               <Text centered>
-                <Text bold>Don't get what we talk about?</Text>
+                <Text bold>Don't get what we're talking about?</Text>
                 <br />
                 <Text secondary>
-                  learn more about{' '}
+                  Learn more about{' '}
                   <Link
                     primary
                     href="https://webmonetization.org/"
                     target="_blank"
                   >
-                    Web monetization
+                    Web Monetization
                   </Link>
                 </Text>
               </Text>

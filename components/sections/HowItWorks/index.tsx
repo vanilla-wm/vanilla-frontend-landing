@@ -1,19 +1,29 @@
 import React, { useState, useEffect } from 'react'
 import { Container, Row, Col } from '@vitus-labs/coolgrid'
 import Section from 'base/Section'
-import Heading from 'base/Heading'
+import heading from 'base/Heading'
 import Category from './Category'
+import AnimBackground from './AnimBackground'
 import Step1 from './animations/Step1'
 import Step2 from './animations/Step2'
 import Step3 from './animations/Step3'
 
-const TIMEOUT = 6000
+const TIMEOUT = 8000
 
 const data = {
   0: <Step1 />,
   1: <Step2 />,
   2: <Step3 />,
 }
+
+const Heading = heading.styles(
+  (css) => css`
+    align-self: center;
+    @media screen and (min-width: 768px) {
+      align-self: flex-start;
+    }
+  `
+)
 
 export default () => {
   const iterate = () => {
@@ -26,7 +36,7 @@ export default () => {
 
   const [active, setActive] = useState(0)
   const [seconds, setSeconds] = useState(0)
-  const [isCounterActive, setCounterActive] = useState(true)
+  const [isCounterActive] = useState(true)
 
   const reset = () => {
     setSeconds(0)
@@ -58,34 +68,35 @@ export default () => {
   return (
     <Section id="how-it-works">
       <Container>
-        <Row>
-          <Heading level1>How it works</Heading>
-        </Row>
-        <Row gap={32} gutter={0}>
-          <Col size={{ xs: 12, md: 4 }}>
+        <Row gap={{ xs: 32, xl: 64 }} gutter={0}>
+          <Col size={{ xs: 12, lg: 4 }}>
+            <Heading level1>How it works</Heading>
             <Category
               index={1}
               title="Content Request"
-              text="User requests content on your web or mobile app"
+              text="When users visit your site, they request content and initialize Web Monetization"
               onClick={() => boxEvent(0)}
               active={active === 0}
             />
             <Category
               index={2}
               title="Payment Verification"
-              text="Your back-end verifies payment stream using our API"
+              text="Use Vanilla API to verify payment streams from users before enabling exclusive content"
               onClick={() => boxEvent(1)}
               active={active === 1}
             />
             <Category
               index={3}
               title="Content Delivery"
-              text="You are paid and your user is happy 🎉"
+              text="The users get requested content and you are paid 🎉"
               onClick={() => boxEvent(2)}
               active={active === 2}
             />
           </Col>
-          <Col size={{ xs: 12, md: 7 }}>{data[active]}</Col>
+          <Col size={{ xs: 12, lg: 8 }}>
+            <AnimBackground />
+            {data[active]}
+          </Col>
         </Row>
       </Container>
     </Section>

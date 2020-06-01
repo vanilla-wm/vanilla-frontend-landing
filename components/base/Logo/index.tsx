@@ -8,4 +8,5 @@ const logos = {
 export default element.config({ name: 'Logo' }).attrs(({ name }) => ({
   tag: 'img',
   src: logos[name],
+  alt: `logo ${name}`,
 }))

@@ -36,7 +36,7 @@ const Root = styled.div`
   animation-fill-mode: forwards;
   animation-timing-function: linear;
   animation-duration: 0.01s;
-  animation-delay: 3s;
+  animation-delay: 4s;
   animation-name: ${wrapperAnim};
 `
 
@@ -50,7 +50,7 @@ const Left = styled.div`
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
   animation-timing-function: linear;
-  animation-duration: 6s;
+  animation-duration: 8s;
   animation-name: ${leftSpin};
 `
 
@@ -64,7 +64,7 @@ const Right = styled.div`
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
   animation-timing-function: linear;
-  animation-duration: 3s;
+  animation-duration: 4s;
   animation-name: ${rightSpin};
 `
 

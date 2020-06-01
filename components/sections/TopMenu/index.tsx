@@ -4,39 +4,37 @@ import { Link as AnimationLink } from 'react-scroll'
 import { throttle } from 'lodash'
 import { Container } from '@vitus-labs/coolgrid'
 import { element as Element } from 'base/base'
-import LinkList from 'base/LinkList'
-import Link from 'base/Link'
 import Icon from 'base/Icon'
+import Link from 'base/Link'
 import Logo from 'base/Logo'
-import Button from 'base/Button'
 import Badge from 'base/Badge'
-
-const afterContent = () => (
-  <LinkList>
-    <AnimationLink to="home" spy={true} smooth={true} duration={300}>
-      <Link active label="About" />
-    </AnimationLink>
-    <AnimationLink to="how-it-works" spy={true} smooth={true} duration={300}>
-      <Link label="How it works" />
-    </AnimationLink>
-    <AnimationLink to="easy-setup" spy={true} smooth={true} duration={300}>
-      <Link label="Easy Setup" />
-    </AnimationLink>
-    <AnimationLink to="plugins" spy={true} smooth={true} duration={300}>
-      <Link label="Plugins" />
-    </AnimationLink>
-    <Button
-      google
-      label="Sign in with Google"
-      beforeContent={<Icon name="google" />}
-    />
-  </LinkList>
-)
+import Menu from './Menu'
+import MobileMenu from './MobileMenu'
 
 const beforeContent = () => (
   <>
-    <Logo name="vanilla" />
-    <Badge>Experimental</Badge>
+    <AnimationLink
+      to="home"
+      spy={true}
+      smooth={true}
+      duration={300}
+      offset={-60}
+    >
+      <Link plain>
+        <Logo name="vanilla" />
+      </Link>
+    </AnimationLink>
+    <AnimationLink
+      to="home"
+      spy={true}
+      smooth={true}
+      duration={300}
+      offset={-60}
+    >
+      <Link plain>
+        <Badge>Experimental</Badge>
+      </Link>
+    </AnimationLink>
   </>
 )
 
@@ -47,28 +45,28 @@ const Wrapper = Element.config({ name: 'section/TopMenu/Wrapper' })
   })
   .theme({
     height: 72,
+    overflow: 'hidden',
   })
 
 const Inner = Element.config({ name: 'section/TopMenu/Inner' })
   .attrs({
-    id: 'home',
     block: true,
   })
   .theme((t) => ({
-    boxSizing: 'content-box',
     position: 'fixed',
     top: 0,
     left: 0,
     right: 0,
     height: 'inherit',
-    width: 'inherit',
     backgroundColor: t.color.black,
     paddingX: 16,
     zIndex: 100,
+    transition: '0.3s',
+    borderBottom: `1px solid black`,
   }))
   .variants({
     sticked: {
-      borderBottom: `1px solid #48484A`,
+      borderColor: '#48484A',
     },
   })
 
@@ -81,16 +79,17 @@ const Content = Element.attrs({
 })
 
 export default (props) => {
-  let windowSize = {}
+  let windowSize = { innerWidth: 0 }
   if (process.browser) {
     windowSize = useWindowSize()
   }
 
   const [sticked, setSticked] = useState(false)
+  const [isOpenMenu, setOpenMenu] = useState(false)
 
   const showHamburger = windowSize.innerWidth < 992
 
-  const handleScroll = (e) => {
+  const handleScroll = () => {
     window.scrollY === 0 ? setSticked(false) : setSticked(true)
   }
 
@@ -105,16 +104,25 @@ export default (props) => {
   })
 
   return (
-    <Wrapper>
-      <Inner sticked={sticked}>
-        <Container data-test="container">
-          <Content
-            {...props}
-            beforeContent={beforeContent}
-            afterContent={showHamburger ? null : afterContent}
-          />
-        </Container>
-      </Inner>
-    </Wrapper>
+    <>
+      <Wrapper>
+        <Inner sticked={sticked}>
+          <Container data-test="container">
+            <Content
+              {...props}
+              beforeContent={beforeContent}
+              afterContent={
+                windowSize.innerWidth !== 0 && showHamburger ? (
+                  <Icon name="menu" onClick={() => setOpenMenu(true)} />
+                ) : (
+                  Menu
+                )
+              }
+            />
+          </Container>
+        </Inner>
+      </Wrapper>
+      {isOpenMenu && <MobileMenu onClose={() => setOpenMenu(false)} />}
+    </>
   )
 }

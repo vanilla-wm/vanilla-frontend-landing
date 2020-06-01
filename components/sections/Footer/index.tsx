@@ -3,31 +3,42 @@ import useWindowSize from '@rehooks/window-size'
 import { Container, Row, Col } from '@vitus-labs/coolgrid'
 import styled from 'styled-components'
 import box from 'base/Box'
-import Heading from 'base/Heading'
+import heading from 'base/Heading'
 import Text from 'base/Text'
-import List from 'base/List'
+import list from 'base/List'
+import Link from 'base/Link'
 import logo from 'base/Logo'
 import shape from 'base/Shape'
 
 const dataListA = [
   { label: 'Vanilla Home', link: 'https://vanilla.so' },
   { label: 'Vanilla Admin', link: 'https://admin.vanilla.so' },
-  { label: 'Terms of Services', link: 'https://vanilla.so' },
-  { label: 'Privacy Policy', link: 'https://vanilla.so' },
+  {
+    label: 'Terms and Conditions',
+    link: 'https://www.iubenda.com/terms-and-conditions/25767064',
+  },
+  {
+    label: 'Privacy Policy',
+    link: 'https://www.iubenda.com/privacy-policy/25767064',
+  },
+  {
+    label: 'Cookie Policy',
+    link: 'https://www.iubenda.com/privacy-policy/25767064/cookie-policy',
+  },
 ]
 
 const dataListB = [
   { label: 'Grant for the web', link: 'https://www.grantfortheweb.org/' },
   { label: 'Coil', link: 'https://coil.com/' },
-  { label: 'Cinnamon', link: 'https://www.cinnamon.video/' },
   { label: 'Puma Browser', link: 'https://www.pumabrowser.com/' },
+  { label: 'Cinnamon', link: 'https://www.cinnamon.video/' },
 ]
 
 const dataListC = [
   { label: 'Web Monetization', link: 'https://webmonetization.org/' },
   { label: 'Interledger', link: 'https://interledger.org/' },
   { label: 'GateHub', link: 'https://gatehub.net/' },
-  { label: 'Uphold', link: 'https://uphold.com/en-us/' },
+  { label: 'Uphold', link: 'https://uphold.com/' },
 ]
 
 const Box = box.theme((t) => ({
@@ -37,6 +48,21 @@ const Box = box.theme((t) => ({
   paddingBottom: { xs: 32 },
   overflow: 'hidden',
 }))
+
+const List = list.styles(
+  (css) => css`
+    & * {
+      font-weight: 500;
+    }
+  `
+)
+
+const FooterLink = styled.a`
+  color: inherit;
+  text-decoration: underline;
+`
+
+const Heading = heading.theme({ display: 'block' })
 
 const FooterBox = box.theme({
   marginTop: 32,
@@ -54,15 +80,16 @@ const Shape = styled(shape).attrs({
 `
 
 export default () => {
-  let windowSize = {}
+  let windowSize = { innerWidth: 0 }
   if (process.browser) {
     windowSize = useWindowSize()
   }
 
   const showShape = windowSize.innerWidth >= 768
   const showEmptyHeading = windowSize.innerWidth >= 576
-  const showBRInFooter =
-    windowSize.innerWidth >= 400 && windowSize.innerWidth <= 800
+  const showBRInFooter = windowSize.innerWidth <= 800
+
+  const showBRInFooterXS = windowSize.innerWidth <= 400
 
   return (
     <Box>
@@ -71,8 +98,18 @@ export default () => {
         <Row>
           <Col size={{ xs: 12, lg: 9 }}>
             <Heading reset level1 left>
-              Project Vanilla is developed as a part of Grant for the Web
-              hackathon by Cinnamon.
+              Project Vanilla is developed as part of{' '}
+              <FooterLink
+                href="https://dev.to/devteam/announcing-the-grant-for-the-web-hackathon-on-dev-3kd1"
+                target="_blank"
+              >
+                Grant for the Web hackathon
+              </FooterLink>{' '}
+              by{' '}
+              <FooterLink href="https://www.cinnamon.video/" target="_blank">
+                Cinnamon
+              </FooterLink>
+              .
             </Heading>
           </Col>
         </Row>
@@ -100,9 +137,14 @@ export default () => {
         </Row>
         <FooterBox contentDirection="inline">
           <Text inline dark sm>
-            Created with love over the weekend in Prague,
-            {showBRInFooter && <br />}
-            Czech republic by <Logo name="cinnamon" />
+            Created with love over the weekend
+            {showBRInFooter ? <br /> : ' '}
+            in Prague, Czech republic
+            {showBRInFooterXS ? <br /> : ' '}
+            by{' '}
+            <Link href="https://www.cinnamon.video/" target="_blank">
+              <Logo name="cinnamon" />
+            </Link>
           </Text>
           &nbsp;
         </FooterBox>

@@ -13,6 +13,7 @@ module.exports = function (api) {
             base: './components/base',
             layout: './components/layout',
             section: './components/sections',
+            hook: './components/hooks',
             utils: './utils',
             theme: './theme',
           },

@@ -6,7 +6,9 @@
   "scripts": {
     "start": "yarn next",
     "start:prod": "yarn next start",
-    "build": "yarn next build"
+    "build": "yarn next build",
+    "export": "yarn next export",
+    "prep": "yarn build && yarn export"
   },
   "dependencies": {
     "@rehooks/window-size": "^1.0.2",
@@ -15,10 +17,10 @@
     "@vitus-labs/elements": "^0.7.10",
     "@vitus-labs/rocketstyle": "^0.7.6",
     "@vitus-labs/unistyle": "^0.7.3",
+    "js-cookies": "^1.0.4",
     "lodash": "^4.17.15",
     "lottie-react-web": "^2.1.4",
     "next": "^9.3.3",
-    "next-seo": "^4.5.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scroll": "^1.7.16",
@@ -48,6 +50,7 @@
     "eslint-plugin-prettier": "^3.1.2",
     "eslint-plugin-react": "^7.19.0",
     "eslint-plugin-react-hooks": "^3.0.0",
+    "image-trace-loader": "^1.0.2",
     "imagemin-mozjpeg": "^9.0.0",
     "imagemin-optipng": "^8.0.0",
     "imagemin-svgo": "^8.0.0",

@@ -31,6 +31,7 @@
       "~/*": ["*"],
       "base/*": ["./components/base/*"],
       "sections/*": ["./components/sections/*"],
+      "hooks/*": ["./components/hooks/*"],
       "theme/*": ["./theme/*"]
     },
     "noEmit": true

@@ -1,5 +1,4 @@
 import { element } from 'base/base'
-import theme from '~/theme'
 
 export default element
   .config({ name: 'Section' })

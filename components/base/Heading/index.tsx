@@ -17,14 +17,14 @@ export default element
   }))
   .variants((t) => ({
     title: {
-      fontSize: { xs: 28, md: 36 },
+      fontSize: { xs: 28, md: 48 },
       fontWeight: t.fontWeight.bold,
-      marginBottom: 24,
+      marginBottom: 4,
       color: t.color.primary,
       textAlign: 'center',
     },
     level1: {
-      fontSize: { xs: 24, lg: 32 },
+      fontSize: { xs: 24, lg: 30 },
       fontWeight: t.fontWeight.bold,
       marginBottom: { xs: 24, md: 48 },
       backgroundColor: t.color.primary,
@@ -35,7 +35,7 @@ export default element
       paddingX: 32,
     },
     level2: {
-      fontSize: { xs: 20, md: 24 },
+      fontSize: { xs: 18, xl: 24 },
       fontWeight: t.fontWeight.semibold,
       marginY: 16,
     },

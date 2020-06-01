@@ -9,4 +9,6 @@ export default element
   })
   .theme({
     backgroundColor: 'black',
+    width: '100vw',
+    overflowX: 'hidden',
   })

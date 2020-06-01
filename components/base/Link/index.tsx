@@ -9,6 +9,7 @@ export default element
     cursor: 'pointer',
     fontWeight: 500,
     transition: '0.3s',
+    fontSize: 16,
     base: {
       color: 'white',
     },
@@ -34,6 +35,11 @@ export default element
       },
     },
   }))
-  .multiple({
+  .multiple((_, css) => ({
     active: true,
-  })
+    plain: {
+      extendCss: css`
+        border: none !important;
+      `,
+    },
+  }))

@@ -19,8 +19,15 @@ export default element
       fontWeight: 'bold',
     },
   }))
-  .multiple({
+  .multiple((t) => ({
     iconBigger: {
       width: '100%',
+      backgroundColor: 'rgba(254, 182, 17, 0.2)',
+      minWidth: 200,
+      transition: '0.3s',
+      hover: {
+        backgroundColor: t.color.primary,
+        color: t.color.black,
+      },
     },
-  })
+  }))
