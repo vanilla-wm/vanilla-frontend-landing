@@ -6,10 +6,11 @@ export default element
     block: true,
     contentDirection: 'rows',
     contentAlignX: 'block',
+    contentAlignY: 'top',
   })
   .theme({
     backgroundColor: 'black',
     width: '100vw',
     overflowX: 'hidden',
-    minHeight: '100vh',
+    minHeight: '110vh',
   })
