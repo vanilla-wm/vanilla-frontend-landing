@@ -1,6 +1,7 @@
 import React from 'react'
 import useWindowSize from '@rehooks/window-size'
 import { Container, Row, Col } from '@vitus-labs/coolgrid'
+import auth from 'hooks/auth'
 import { element } from 'base/base'
 import section from 'base/Section'
 import Heading from 'base/Heading'
@@ -29,6 +30,8 @@ export default () => {
   if (process.browser) {
     windowSize = useWindowSize()
   }
+
+  const { signIn } = auth()
 
   const showLine = windowSize.innerWidth >= 768
   const centeredText = windowSize.innerWidth < 768
@@ -59,7 +62,7 @@ export default () => {
                 <Heading level2 label="Vanilla Account" />
                 <Text light centered={centeredText}>
                   Create Vanilla account by{' '}
-                  <Link primary href="https://api.vanilla.so/auth/google">
+                  <Link primary onClick={signIn}>
                     singing up with Google
                   </Link>
                 </Text>

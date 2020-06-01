@@ -1,6 +1,7 @@
 import React from 'react'
 import useWindowSize from '@rehooks/window-size'
 import { Container, Row, Col } from '@vitus-labs/coolgrid'
+import auth from 'hooks/auth'
 import Box from 'base/Box'
 import Heading from 'base/Heading'
 import button from 'base/Button'
@@ -27,6 +28,8 @@ export default () => {
 
   const showParallax = windowSize.innerWidth >= 768
 
+  const { signIn } = auth()
+
   return (
     <Wrapper>
       {showParallax && <Parallax />}
@@ -44,7 +47,7 @@ export default () => {
                 google
                 label="Sign in with Google"
                 beforeContent={<Icon name="google" />}
-                href="https://api.vanilla.so/auth/google"
+                onClick={signIn}
               />
 
               <Text centered>

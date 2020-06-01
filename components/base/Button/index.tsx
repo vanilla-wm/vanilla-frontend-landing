@@ -9,6 +9,7 @@ export default element
     // transition: 'background-color 0.2s',
     fontFamily: t.fontFamily.mono,
     minWidth: 240,
+    border: 'none',
   }))
   .states((t) => ({
     google: {

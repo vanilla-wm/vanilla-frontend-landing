@@ -3,7 +3,7 @@ import useWindowSize from '@rehooks/window-size'
 import { Container, Row, Col } from '@vitus-labs/coolgrid'
 import styled from 'styled-components'
 import box from 'base/Box'
-import Heading from 'base/Heading'
+import heading from 'base/Heading'
 import Text from 'base/Text'
 import list from 'base/List'
 import Link from 'base/Link'
@@ -57,6 +57,13 @@ const List = list.styles(
   `
 )
 
+const FooterLink = styled.a`
+  color: inherit;
+  text-decoration: underline;
+`
+
+const Heading = heading.theme({ display: 'block' })
+
 const FooterBox = box.theme({
   marginTop: 32,
   display: 'block',
@@ -91,8 +98,18 @@ export default () => {
         <Row>
           <Col size={{ xs: 12, lg: 9 }}>
             <Heading reset level1 left>
-              Project Vanilla is developed as part of the Grant for the Web
-              hackathon by Cinnamon.
+              Project Vanilla is developed as part of{' '}
+              <FooterLink
+                href="https://dev.to/devteam/announcing-the-grant-for-the-web-hackathon-on-dev-3kd1"
+                target="_blank"
+              >
+                Grant for the Web hackathon
+              </FooterLink>{' '}
+              by{' '}
+              <FooterLink href="https://www.cinnamon.video/" target="_blank">
+                Cinnamon
+              </FooterLink>
+              .
             </Heading>
           </Col>
         </Row>

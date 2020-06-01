@@ -63,9 +63,15 @@ export default class MyDocument extends Document<Props> {
             property="og:description"
             content="Verify payment streams before showing exclusive content to users."
           />
-          <meta property="og:image" content="LINK TO IMAGE HERE.png" />
+          <meta
+            property="og:image"
+            content={require('assets/seo/open-graph.jpg')}
+          />
 
-          <meta property="twitter:card" content="summary_large_image" />
+          <meta
+            property="twitter:card"
+            content={require('assets/seo/twitter.jpg')}
+          />
           <meta property="twitter:url" content="https://vanilla.so/" />
           <meta
             property="twitter:title"
@@ -75,7 +81,10 @@ export default class MyDocument extends Document<Props> {
             property="twitter:description"
             content="Verify payment streams before showing exclusive content to users."
           />
-          <meta property="twitter:image" content="LINK TO IMAGE HERE.png" />
+          <meta
+            property="twitter:image"
+            content={require('assets/seo/twitter-og.jpg')}
+          />
 
           <meta name="google" content="nositelinkssearchbox" />
           <meta name="format-detection" content="telephone=no" />

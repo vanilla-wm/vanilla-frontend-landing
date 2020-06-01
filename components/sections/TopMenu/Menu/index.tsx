@@ -1,14 +1,14 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Link as AnimationLink } from 'react-scroll'
+import auth from 'hooks/auth'
 import LinkList from 'base/LinkList'
 import Link from 'base/Link'
 import Button from 'base/Button'
 import Icon from 'base/Icon'
 
 export default ({ handleClick, vertical }) => {
-  const [active, setActive] = useState('home')
-
-  console.log(active)
+  // const [setActive] = useState('home')
+  const { signIn } = auth()
 
   return (
     <LinkList vertical={vertical}>
@@ -18,7 +18,7 @@ export default ({ handleClick, vertical }) => {
         smooth={true}
         duration={300}
         offset={-60}
-        onSetActive={() => setActive('home')}
+        // onSetActive={() => setActive('home')}
       >
         <Link label="About" onClick={handleClick} />
       </AnimationLink>
@@ -28,7 +28,7 @@ export default ({ handleClick, vertical }) => {
         smooth={true}
         duration={300}
         offset={-60}
-        onSetActive={() => setActive('how-it-works')}
+        // onSetActive={() => setActive('how-it-works')}
       >
         <Link label="How it works" onClick={handleClick} />
       </AnimationLink>
@@ -38,7 +38,7 @@ export default ({ handleClick, vertical }) => {
         smooth={true}
         duration={300}
         offset={-60}
-        onSetActive={() => setActive('easy-setup')}
+        // onSetActive={() => setActive('easy-setup')}
       >
         <Link label="Easy Setup" onClick={handleClick} />
       </AnimationLink>
@@ -48,7 +48,7 @@ export default ({ handleClick, vertical }) => {
         smooth={true}
         duration={300}
         offset={-60}
-        onSetActive={() => setActive('plugins')}
+        // onSetActive={() => setActive('plugins')}
       >
         <Link label="Plugins" onClick={handleClick} />
       </AnimationLink>
@@ -56,7 +56,7 @@ export default ({ handleClick, vertical }) => {
         google
         label="Sign in with Google"
         beforeContent={<Icon name="google" />}
-        href="https://api.vanilla.so/auth/google"
+        onClick={signIn}
       />
     </LinkList>
   )
