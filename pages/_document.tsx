@@ -98,7 +98,7 @@ export default class MyDocument extends Document<Props> {
             rel="preconnect"
             href="https://fonts.gstatic.com/"
             crossOrigin="anonymous"
-          ></link>
+          />
           <link
             href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;700&display=swap"
             rel="stylesheet"
@@ -106,6 +106,21 @@ export default class MyDocument extends Document<Props> {
           <link
             href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&family=Work+Sans:wght@400;500;700&display=swap"
             rel="stylesheet"
+          />
+          <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=UA-168106177-1"
+          />
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              
+              gtag('config', 'UA-168106177-1');
+          `,
+            }}
           />
           {this.props.styleTags}
           <link
