@@ -18,7 +18,7 @@ export default () => {
 
     if (!getCookie()) {
       window.open(
-        'https://api.vanilla.so/auth/google',
+        'https://wm.vanilla.so/auth/google',
         'popup',
         'width=600,height=600'
       )
