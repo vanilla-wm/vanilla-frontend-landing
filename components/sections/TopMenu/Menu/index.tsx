@@ -30,7 +30,7 @@ export default ({ handleClick, vertical }) => {
         offset={-60}
         // onSetActive={() => setActive('how-it-works')}
       >
-        <Link label="How it works" onClick={handleClick} />
+        <Link label="How it Works" onClick={handleClick} />
       </AnimationLink>
       <AnimationLink
         to="easy-setup"

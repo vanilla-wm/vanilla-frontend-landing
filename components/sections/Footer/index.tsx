@@ -28,7 +28,7 @@ const dataListA = [
 ]
 
 const dataListB = [
-  { label: 'Grant for the web', link: 'https://www.grantfortheweb.org/' },
+  { label: 'Grant for the Web', link: 'https://www.grantfortheweb.org/' },
   { label: 'Coil', link: 'https://coil.com/' },
   { label: 'Puma Browser', link: 'https://www.pumabrowser.com/' },
   { label: 'Cinnamon', link: 'https://www.cinnamon.video/' },
@@ -98,7 +98,7 @@ export default () => {
         <Row>
           <Col size={{ xs: 12, lg: 9 }}>
             <Heading reset level1 left>
-              Project Vanilla is developed as part of{' '}
+              Project Vanilla is being developed as part of the{' '}
               <FooterLink
                 href="https://dev.to/devteam/announcing-the-grant-for-the-web-hackathon-on-dev-3kd1"
                 target="_blank"
@@ -144,7 +144,7 @@ export default () => {
           <Text inline dark sm>
             Created with love over the weekend
             {showBRInFooter ? <br /> : ' '}
-            in Prague, Czech republic
+            in Prague, Czech Republic
             {showBRInFooterXS ? <br /> : ' '}
             by{' '}
             <Link

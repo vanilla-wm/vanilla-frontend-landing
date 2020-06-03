@@ -61,7 +61,7 @@ export default () => {
                 </Box>
                 <Heading level2 label="Vanilla Account" />
                 <Text light centered={centeredText}>
-                  Create Vanilla account by{' '}
+                  Create a Vanilla account by{' '}
                   <Link primary onClick={signIn}>
                     signing up with Google
                   </Link>
@@ -76,7 +76,7 @@ export default () => {
                 </Box>
                 <Heading level2 label="Payment Pointer" />
                 <Text light centered={centeredText}>
-                  Add Payment Pointer to{' '}
+                  Add a Payment Pointer to the{' '}
                   <Link
                     primary
                     href="https://webmonetization.org/#wallets"
@@ -97,7 +97,7 @@ export default () => {
                 </Box>
                 <Heading level2 label="Code Snippet" />
                 <Text light centered={centeredText}>
-                  Place generated Code Snippet to the head of your HTML
+                  Place a generated Code Snippet to the head of your HTML
                 </Text>
               </ItemBox>
             </Col>
