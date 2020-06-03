@@ -44,7 +44,7 @@ export default () => {
               <Heading tag="h2" subheading>
                 Verify payment streams before sharing exclusive content{' '}
                 {showBr && <br />}
-                with users with Vanilla API
+                with users using Vanilla API
               </Heading>
               <Button
                 google
