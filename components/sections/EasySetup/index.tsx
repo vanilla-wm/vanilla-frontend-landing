@@ -104,7 +104,6 @@ export default () => {
             </Col>
             <Col>
               <ItemBox>
-                {showLine && <Line />}
                 <Box icon>
                   <Icon name="api" />
                 </Box>
