@@ -4,7 +4,7 @@ import { Container, Row, Col } from '@vitus-labs/coolgrid'
 import auth from 'hooks/auth'
 import { element } from 'base/base'
 import section from 'base/Section'
-import Heading from 'base/Heading'
+import Heading, { HeadingWrapper } from 'base/Heading'
 import Box from 'base/Box'
 import Icon from 'base/Icon'
 import Text from 'base/Text'
@@ -40,8 +40,10 @@ export default () => {
     <Section id="easy-setup">
       <Container>
         <Row>
-          <Col component={element} contentAlignX={{ xs: 'center', md: 'left' }}>
-            <Heading level1>Easy setup</Heading>
+          <Col component={element}>
+            <HeadingWrapper>
+              <Heading level1>Easy setup</Heading>
+            </HeadingWrapper>
           </Col>
         </Row>
         {windowSize.innerWidth && (

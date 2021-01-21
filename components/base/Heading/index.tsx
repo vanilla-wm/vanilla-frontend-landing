@@ -1,4 +1,5 @@
 import { element } from 'base/base'
+import styled from 'styled-components'
 
 export default element
   .config({ name: 'Heading' })
@@ -68,3 +69,13 @@ export default element
       color: t.color.black,
     },
   }))
+
+
+export const HeadingWrapper = styled.div`
+  text-align: center;
+  width: 100%;
+  
+  @media screen and (min-width: 768px) {
+    text-align: left;
+  }
+`

@@ -2,7 +2,7 @@ import React from 'react'
 import { Container, Row, Col } from '@vitus-labs/coolgrid'
 import { element } from 'base/base'
 import Section from 'base/Section'
-import Heading from 'base/Heading'
+import Heading, { HeadingWrapper } from 'base/Heading'
 import Icon from 'base/Icon'
 import link from 'base/Link'
 import Box from 'base/Box'
@@ -24,8 +24,10 @@ export default () => (
   <Section id="plugins">
     <Container>
       <Row>
-        <Col component={element} contentAlignX={{ xs: 'center', md: 'left' }}>
-          <Heading level1>Plugins</Heading>
+        <Col component={element}>
+          <HeadingWrapper>
+            <Heading level1>Plugins</Heading>
+          </HeadingWrapper>
         </Col>
       </Row>
       <Row
