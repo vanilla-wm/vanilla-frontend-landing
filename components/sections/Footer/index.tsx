@@ -69,7 +69,7 @@ const FooterBox = box.theme({
   display: 'block',
 })
 
-const Logo = logo.theme({ height: 20, top: 5 })
+const Logo = logo.theme({ height: 16 })
 
 const Shape = styled(shape).attrs({
   name: 'vanilla',
@@ -141,13 +141,21 @@ export default () => {
           </Col>
         </Row>
         <FooterBox contentDirection="inline">
-          <Text inline dark sm>
+          <Text inline dark sm
+                style={{
+                  display:'flex',
+                }}>
             Created with love over the weekend
             {showBRInFooter ? <br /> : ' '}
             in Prague, Czech Republic
             {showBRInFooterXS ? <br /> : ' '}
-            by{' '}
+            by
             <Link
+              style={{
+                display:'inline-block',
+                marginLeft:'8px',
+                height:'100%',
+              }}
               href="https://www.cinnamon.video/"
               target="_blank"
               rel="noreferrer"
