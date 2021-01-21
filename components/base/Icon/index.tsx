@@ -13,6 +13,8 @@ const icons = {
   nginx: require('assets/nginx.svg'),
   wordpress: require('assets/wordpress.svg'),
   person: require('assets/person.svg'),
+  dartJs: require('assets/dartJs.png'),
+  nodeJs: require('assets/nodeJs.png'),
 }
 
 export default element
@@ -28,5 +30,10 @@ export default element
       top: '50%',
       left: '50%',
       transform: 'translateX(-50%) translateY(-50%)',
+    },
+  })
+  .multiple({
+    opacity: {
+      opacity: '20%',
     },
   })

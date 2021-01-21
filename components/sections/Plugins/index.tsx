@@ -40,6 +40,24 @@ export default () => (
           <ItemBox>
             <Box icon>
               <span>Coming soon</span>
+              <Icon name="nodeJs" absolute opacity />
+            </Box>
+            <Heading level2 centered label="Node.js" />
+          </ItemBox>
+        </Col>
+        <Col>
+          <ItemBox>
+            <Box icon>
+              <span>Coming soon</span>
+              <Icon name="dartJs" absolute opacity />
+            </Box>
+            <Heading level2 centered label="Dart.js" />
+          </ItemBox>
+        </Col>
+        <Col>
+          <ItemBox>
+            <Box icon>
+              <span>Coming soon</span>
               <Icon name="wordpress" absolute />
             </Box>
             <Heading level2 centered label="Wordpress" />

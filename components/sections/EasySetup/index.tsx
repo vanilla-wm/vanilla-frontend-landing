@@ -48,6 +48,7 @@ export default () => {
           <Row
             component={element}
             contentAlignX="center"
+            contentAlignY="top"
             gap={64}
             size={{ xs: 8, sm: 6, lg: 3 }}
             gutter={{ xs: 16, md: 0 }}
