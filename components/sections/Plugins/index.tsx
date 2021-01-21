@@ -72,24 +72,6 @@ export default () => (
             <Heading level2 centered label="Express.js" />
           </ItemBox>
         </Col>
-        <Col>
-          <ItemBox>
-            <Box icon>
-              <span>Coming soon</span>
-              <Icon name="apache" absolute />
-            </Box>
-            <Heading level2 centered label="Apache" />
-          </ItemBox>
-        </Col>
-        <Col>
-          <ItemBox>
-            <Box icon>
-              <span>Coming soon</span>
-              <Icon name="nginx" absolute />
-            </Box>
-            <Heading level2 centered label="Nginx" />
-          </ItemBox>
-        </Col>
         <Col size={{ xs: 8, sm: 6, md: 4, lg: 3 }}>
           <Box>
             <MailTo
