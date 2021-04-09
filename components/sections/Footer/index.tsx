@@ -12,19 +12,7 @@ import shape from 'base/Shape'
 
 const dataListA = [
   { label: 'Vanilla Home', link: 'https://vanilla.so' },
-  { label: 'Vanilla Admin', link: 'https://admin.vanilla.so' },
-  {
-    label: 'Terms and Conditions',
-    link: 'https://www.iubenda.com/terms-and-conditions/25767064',
-  },
-  {
-    label: 'Privacy Policy',
-    link: 'https://www.iubenda.com/privacy-policy/25767064',
-  },
-  {
-    label: 'Cookie Policy',
-    link: 'https://www.iubenda.com/privacy-policy/25767064/cookie-policy',
-  },
+  { label: 'Vanilla Admin', link: 'https://admin.vanilla.so' }
 ]
 
 const dataListB = [
