@@ -8,7 +8,8 @@
     "start:prod": "yarn next start",
     "build": "yarn next build",
     "export": "yarn next export",
-    "prep": "yarn build && yarn export"
+    "prep": "yarn build && yarn export",
+    "deploy": "aws s3 --profile cinnamon-prod sync ./out s3://vanilla-wm-fe"
   },
   "dependencies": {
     "@rehooks/window-size": "^1.0.2",
