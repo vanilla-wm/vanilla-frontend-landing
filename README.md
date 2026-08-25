@@ -9,7 +9,3 @@ Source code of Vanilla landing page wich can be found at [vanila.so](https://van
 
 
 Contact me directly at **vit@cinnamon.video**
-
-
-
-sdsds
