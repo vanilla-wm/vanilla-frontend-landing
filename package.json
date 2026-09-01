@@ -19,7 +19,7 @@
     "@vitus-labs/rocketstyle": "^0.7.6",
     "@vitus-labs/unistyle": "^0.7.3",
     "js-cookies": "^1.0.4",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.21",
     "lottie-react-web": "^2.1.4",
     "next": "^9.3.3",
     "react": "^16.13.1",
